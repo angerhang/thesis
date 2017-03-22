@@ -1,0 +1,12 @@
+21.03.2017:
+        -preprocessing:
+                1. subjects deleted for poor eeg:
+                   1c9q2a
+                   6n4r5k
+                   Y1D
+                   
+                2. outliers for relative rmse:
+                   Y2F old
+                   1y9t8j young
+                   
+                   
