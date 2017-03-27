@@ -1,4 +1,4 @@
-function [M, w_out] = startTraining(u, y, x, w, w_in, alpha)
+function [M, w_out, x] = startTraining(U, y, x, w, w_in, alpha)
 % collect responses for the internal dynamics 
 % u: input NC by t
 % y: teacher signal LP by t
@@ -8,23 +8,24 @@ function [M, w_out] = startTraining(u, y, x, w, w_in, alpha)
 % w_out: output weight matrix NC by (1 + LP + NX)
 % alpha: leaky rate
 
-t = size(u, 2);
+t = size(U, 2);
 % internal unit responses 
-xs = zeros(size(x, 1), t); 
+xs = zeros(size(x, 1) + size(U, 1) +1 , t); 
 
 for i=1:t
     % update state
+    u = U(:, i);
     if (i == 1)
-        xs(:, i) = alpha *  tanh(w_in * [1; u(:, i)]);
+       x = alpha *  tanh(w_in * [1; u]);
     else 
-        internal = w' * xs(:,i-1);
-        inputs = w_in * [1; u(:, i)];
+        internal = w' * x;
+        inputs = w_in * [1; u];
         xs_temp = tanh(internal + inputs);
-        xs(:, i) = (1 - alpha) * xs(:, i - 1) + alpha * xs_temp;
+        x = (1 - alpha) * x + alpha * xs_temp;
     end;
+    xs(:, i) = [1; u; x];
 end
 
 % T = w_out * [1; u; xs];
 M = xs;
 w_out = y * pinv(M);
-

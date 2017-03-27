@@ -1,4 +1,4 @@
-function [x, w_in, w] = constructDR(NX, NC, LP)
+function [x, w_in, w] = constructDR(NX, NC)
 % initilize the DR input, internal (x) and output (d) units
 % and their corresponding weights W, W_out and W_back
 % initialize DR parameters 
