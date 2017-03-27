@@ -1,3 +1,5 @@
+clear;
+clc;
 %% put everything together
 % this script first constructs a simple dr with input units
 % then learns from a teacher sin wave of 300 time steps
@@ -5,13 +7,13 @@
 fprintf('Constructing DR...\n');
 
 %% parameters 
-N = 25; % number of internal units
-L = 1; % class number
-time = 300; % sequence length
+alpha = 0.02; % leaky rate
+NC = 12; % number of input channels
+NX = 50; % number of internal units
+LP = 2; % class number
 
 %% model construction
-[x, w, w_back] = constructDR(N, L);
-d = generateSin(time);
+[x, w_in, w, w_out] = constructDR(NX, NC, LP);
 
 fprintf('Sampling ...\n');
 

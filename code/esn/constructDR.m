@@ -1,17 +1,22 @@
-function [x, w, w_back] = constructDR(N, L)
+function [x, w_in, w, w_out] = constructDR(NX, NC, LP)
 % initilize the DR input, internal (x) and output (d) units
 % and their corresponding weights W, W_out and W_back
 % initialize DR parameters 
-% N : the number of internal states
+% NX : the number of internal states
+% LP : the number of predictor classes
+% NC: the number of input channels
 % x: internal inputs
 % w: weights from internal units to output layer
-% w_back: back projection from output to the internal units
+% w_in: input to internal units weights
+% w_out: output weight matrix
 
 % generate output 
-w_back = rand(N, L);
+w_in = rand(NX, 1 + NC);
+w_out = rand(LP, 1 + NC + NX);
+w = rand(NX) - 0.5; % Wij the weight from ith unit to the jth
 
 % construct internal units
-x = zeros(N, L);
-% x = round(rand(N, L));
-w = rand(N) - 0.5; % Wij the weight from ith unit to the jth
+x = zeros(NX, 1);
+
+
 
