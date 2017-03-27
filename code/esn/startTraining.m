@@ -1,28 +1,30 @@
-function [M, T] = startTraining (x, d, w, w_back)
-% sampling and record the weights from 101-300 steps
-% d is the teacher signal of size 300 * 1
-% M: size 200 * 20 of the recored sates
-% T: size 200 * 1 of the teacher force
-xs = zeros(size(x, 1), length(d));
+function [M, w_out] = startTraining(u, y, x, w, w_in, alpha)
+% collect responses for the internal dynamics 
+% u: input NC by t
+% y: teacher signal LP by t
+% x: internal units a vector of length NX
+% w: weight matrix NX by NX
+% w_in: input to internal units weights
+% w_out: output weight matrix NC by (1 + LP + NX)
+% alpha: leaky rate
 
-for i=2:300
+t = size(u, 2);
+% internal unit responses 
+xs = zeros(size(x, 1), t); 
+
+for i=1:t
     % update state
-    internal = w' * xs(:,i-1);
-    back_proj =  w_back * d(i-1);
-    xs(:, i) = tanh(internal + back_proj);
+    if (i == 1)
+        xs(:, i) = alpha *  tanh(w_in * [1; u(:, i)]);
+    else 
+        internal = w' * xs(:,i-1);
+        inputs = w_in * [1; u(:, i)];
+        xs_temp = tanh(internal + inputs);
+        xs(:, i) = (1 - alpha) * xs(:, i - 1) + alpha * xs_temp;
+    end;
 end
 
-M = xs(:, 101:300)';
-T = d(101:300);
-
-ts = 1:50;
-subplot(2,2,2);
-d = xs(1, 1:50)';
-plot(ts, d);
-title('Internal state for the 1st internal unit')
-
-subplot(2,2,3);
-d = xs(3, 1:50)';
-plot(ts, d);
-title('Internal state for the 3st internal unit')
+% T = w_out * [1; u; xs];
+M = xs;
+w_out = y * pinv(M);
 

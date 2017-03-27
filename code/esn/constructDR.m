@@ -1,4 +1,4 @@
-function [x, w_in, w, w_out] = constructDR(NX, NC, LP)
+function [x, w_in, w] = constructDR(NX, NC, LP)
 % initilize the DR input, internal (x) and output (d) units
 % and their corresponding weights W, W_out and W_back
 % initialize DR parameters 
@@ -11,8 +11,8 @@ function [x, w_in, w, w_out] = constructDR(NX, NC, LP)
 % w_out: output weight matrix
 
 % generate output 
-w_in = rand(NX, 1 + NC);
-w_out = rand(LP, 1 + NC + NX);
+w_in = rand(NX, 1 + NC) - 0.5;
+% w_out = rand(LP, 1 + NC + NX) - 0.5;
 w = rand(NX) - 0.5; % Wij the weight from ith unit to the jth
 
 % construct internal units

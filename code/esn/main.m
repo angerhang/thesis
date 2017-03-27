@@ -13,25 +13,14 @@ NX = 50; % number of internal units
 LP = 2; % class number
 
 %% model construction
-[x, w_in, w, w_out] = constructDR(NX, NC, LP);
+[u, y] = loadData;
+[x, w_in, w] = constructDR(NX, NC, LP);
 
-fprintf('Sampling ...\n');
+fprintf('Traning ...\n');
 
-[M, T] = startTraining (x, d, w, w_back);
-w_out = pinv(M) * T;
+[M, w_out] = startTraining(u, y, x, w, w_in, alpha);
 
-error = computeError(T, w_out, M);
+error = computeError(u, M, w_out, y);
+
 fprintf('Sampling completed, the training error is %d ...\n', error);
 
-%% generate unseen sin waves
-generationTime = 50;
-fprintf('Generating predictions ...\n');
-d = exploit (w_out, w, w_back, M(200,:)', T(200), generationTime);
-ds = generateSin(350);
-error =  sum((ds(301:350) - d).^2) / generationTime;
-fprintf('Generation completed, the testing error is %d ...\n', error);
-
-subplot(2,2,4);
-ts = 301:350;
-plot(ts, d);
-title('Generated sin wave for 50 time steps');
