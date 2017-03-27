@@ -1,3 +1,18 @@
+to do:
+   1. save the processed data into m format
+      (offset removal)
+      a. select electrodes:F3 C3 P3 Pz O1 Oz O2 P4 C4 F4 Fz Cz
+      b. downsampling: 512Hz
+      c. filtering: with bandpass 1-40Hz and 50 Hz notch
+      d. artifact removal
+      time steps of 33792
+      
+   2. construct teacher labels
+   3. figure out how to feed the data
+   4. mini arti
+   5. feed everything in 
+
+
 21.03.2017:
         -preprocessing:
                 1. subjects deleted for poor eeg:
@@ -5,8 +20,9 @@
                    6n4r5k
                    Y1D
                    
-                2. outliers for relative rmse:
+                2. outliers removed for relative rmse:
                    Y2F old
                    1y9t8j young
                    
-                   
+22.03.2017:
+        
