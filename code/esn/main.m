@@ -1,7 +1,6 @@
 clear;
 clc;
 %% put everything together
-% this script first constructs a simple dr with input units
 % then learns from a teacher sin wave of 300 time steps
 % and finally produce the sin wave from 301 to 350 time steps
 fprintf('Constructing DR...\n');

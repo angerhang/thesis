@@ -24,5 +24,7 @@ to do:
                    Y2F old
                    1y9t8j young
                    
-22.03.2017:
-        
+28.03.2017:
+   1. construct class labels
+   2. separate training sets and the ones used for predictions
+   
