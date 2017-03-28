@@ -14,6 +14,9 @@ function [x, w_in, w] = constructDR(NX, NC)
 w_in = rand(NX, 1 + NC) - 0.5;
 % w_out = rand(LP, 1 + NC + NX) - 0.5;
 w = rand(NX) - 0.5; % Wij the weight from ith unit to the jth
+opt.disp = 0;
+rhoW = abs(eigs(w, 1, 'LM', opt));
+w = w .* ( 1.25 /rhoW);
 
 % construct internal units
 x = zeros(NX, 1);
