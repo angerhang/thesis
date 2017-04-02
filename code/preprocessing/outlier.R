@@ -1,5 +1,9 @@
 mydata <- read.csv("~/6thSemester/thesis/data/subject_meta.csv")
 
+# reformat row name
+chars <- as.character(mydata$Code)
+mydata$Code <- paste(chars, "_3", sep = "")
+
 # spilt data
 ageThres = 30
 young <- mydata[mydata$Age < ageThres, ]
