@@ -4,6 +4,12 @@ mydata <- read.csv("~/6thSemester/thesis/data/subject_meta.csv")
 chars <- as.character(mydata$Code)
 mydata$Code <- paste(chars, "_3", sep = "")
 
+# list to delete for poor eeg
+to_del <- c('1c9q2a_3', '6n4r5k_3', 'Y1D_3');
+for (code in to_del) {
+  mydata = mydata[!mydata$Code == code, ]
+}
+
 # spilt data
 ageThres = 30
 young <- mydata[mydata$Age < ageThres, ]
@@ -24,7 +30,6 @@ old[old_out, ]
 # 1 for good learners and 2 for bad learners
 young = young[!young_out, ]
 old = old[!old_out, ]
-
 
 young$learn = 1
 old$learn = 1
