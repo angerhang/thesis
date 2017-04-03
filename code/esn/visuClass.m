@@ -11,16 +11,35 @@ if nargin < 5
     endP = 500;
 end
 
+% input chans
 xs = initP:endP;
-subplot(3, 1, 1);
-plot(xs, u(initP:endP));
-title('input dynamics');
+if size(u, 1) > 5 
+    for j=1:2
+        figure;
+        for i=(j -1) * 6 + 1: j * 6
+            subplot(6, 1, i - (j - 1) * 6);
+            plot(xs, u(i, initP:endP));
+            str = sprintf('input dynamics %d', i);
+            title(str);
+        end
+    end
+else
+    figure;
+    for i=1:size(u, 1)
+        subplot(size(u, 1), 1, i);
+        plot(xs, u(i, initP:endP));
+        str = sprintf('input dynamics %d', i);
+        title(str);
+    end
+end
 
-subplot(3, 1, 2);
+% teacher and simulate teacher
+figure;
+subplot(2, 1, 1);
 plot(xs, y(1, initP:endP));
 title('teacher signal');
 
-subplot(3, 1, 3);
+subplot(2, 1, 2);
 plot(xs, y_pre(2, initP:endP));
 title('simulated teacher signal');
 

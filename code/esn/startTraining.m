@@ -36,6 +36,6 @@ reg = 1e-8;
 xt = xs';
 yt = y(:, 1:(t - startPoint));
 % need to change to time average activations instead of x(n)
-w_out = yt * xt * inv(xs * xt + reg*eye(size(x, 1) + size(U, 1) +1));
+w_out = yt * xt * inv(xs * xt + reg * eye(size(x, 1) + size(U, 1) + 1));
 
  
