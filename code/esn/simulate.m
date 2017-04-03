@@ -3,7 +3,7 @@ function [u, y] = simulate(n)
 % for class one 
 u1 = zeros(1, n);
 height = 0; 
-duration = 5;
+duration = 15;
 for i=1:n
     duration = duration - 1;
     
@@ -27,8 +27,8 @@ u2 = generateSin(n);
 y2 = [0; 1];
 y2 = repmat(y2, [1, n]);
 
-u3 = generateSin(n) * 5;
-n = 10000;
+% u3 = generateSin(n) * 5;
+% n = 10000;
 u = [u1 u2'];
 y = [y1 y2];
 ts = 1:20000;

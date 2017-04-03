@@ -22,6 +22,5 @@ y = [y miney];
 % [1; 0] good learner
 % [0; 1] bad learner
 
-
 end
 
