@@ -18,11 +18,11 @@ NC = 12; % number of input channels
 NX = 150; % number of internal units
 LP = 2; % class number
 row = 9; % spetral radius
-in_scale = 1.2;% w_in will be sampled from [-in_scale, in_scale]
-bias_scale = 1; 
+in_scale = 13.3;% w_in will be sampled from [-in_scale, in_scale]
+bias_scale = 33; 
 
-%% model construction
-[u, y] = loadData;
+% model construction
+[u, y, intervals] = loadData;
 % simple custom inputs
 % [u, y] = simulate(100000);
 [x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
@@ -46,11 +46,19 @@ fprintf('Training completed! Time spent: %f\n', endTime);
 
 [y_pre] = exploit(w_out, w_in, w, alpha, u, LP, x);
 
+predictOne = y_pre(:, 1:intervals(1, 2));
+sum(predictOne(1,:))
+sum(predictOne(2,:))
+
+predictTwo = y_pre(:, intervals(2,1):intervals(2,2));
+sum(predictTwo(1,:))
+sum(predictTwo(2,:))
+
 % visu classification 
 initP = 31500;
 endP = 32500;
-unitS = 1;
 visuClass(u, y, y_pre, initP, endP);
+unitS = 50;
 visuUnits(M, initP, endP, unitS);
 
 
