@@ -1,8 +1,9 @@
 clear;
 clc;
-%% put everything together
-% then learns from a teacher sin wave of 300 time steps
-% and finally produce the sin wave from 301 to 350 time steps
+%% driver for esn 
+% we first load eeglab and set the global parameters 
+% preprocessing for data is done separately in preprocess
+% all data should be placed in ../data/processed
 % needs to be carried out in the code/esn folder
 fprintf('Constructing DR...\n');
 
@@ -12,25 +13,26 @@ eeglab;
 cd ../esn
 
 %% parameters 
-alpha = 0.7; % leaky rate
+alpha = 1.7; % leaky rate
 NC = 12; % number of input channels
-NX = 500; % number of internal units
+NX = 150; % number of internal units
 LP = 2; % class number
+row = 9; % spetral radius
+in_scale = 1.2;% w_in will be sampled from [-in_scale, in_scale]
+bias_scale = 1; 
 
 %% model construction
 [u, y] = loadData;
 % simple custom inputs
 % [u, y] = simulate(100000);
-
-% uncomment for custom signal
-% [u, y] = simulate(20000);
-[x, w_in, w] = constructDR(NX, NC);
+[x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
 
 tic;
 fprintf('Start traning ...\n');
 fprintf('Networks parameters: input channels: %d\n', NC);
-fprintf('internal units size: %d leaky rate %f\n', NX, alpha);
-fprintf('Spetrual radius  %f\n', NX);
+fprintf('Internal units size: %d Leaky rate %f\n', NX, alpha);
+fprintf('Spetrual radius  %f\n', row);
+fprintf('Input scale: %f Bias scale: %f\n', in_scale, bias_scale);
 
 [M, w_out, x] = startTraining(u, y, x, w, w_in, alpha);
 
@@ -45,8 +47,8 @@ fprintf('Training completed! Time spent: %f\n', endTime);
 [y_pre] = exploit(w_out, w_in, w, alpha, u, LP, x);
 
 % visu classification 
-initP = 1;
-endP = 1000;
+initP = 31500;
+endP = 32500;
 unitS = 1;
 visuClass(u, y, y_pre, initP, endP);
 visuUnits(M, initP, endP, unitS);

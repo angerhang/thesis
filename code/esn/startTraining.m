@@ -8,7 +8,7 @@ function [M, w_out, x] = startTraining(U, y, x, w, w_in, alpha)
 % w_out: output weight matrix NC by (1 + LP + NX)
 % alpha: leaky rate
 
-startPoint = 100;
+startPoint = 500;
 
 t = size(U, 2);
 % internal unit responses 
