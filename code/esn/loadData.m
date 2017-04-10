@@ -1,29 +1,48 @@
-function [u, y, intervals] = loadData
+function [u, y, intervals, max_u, min_u] = loadData
 %loadData from the *.set files and create the class label
 % u: input sequence 12 * t
 % y: teacher signal 2 * t
 % intervals: the starting and end time for each input sequence 
+% loading the training set 
+% output the high_v and low_v for input normalization
 
-EEG = pop_loadset('filename','p2a8i7h.set', ...
+load('names.mat');  % load the mat for training set
+n = size(names, 1);
+intervals = ones(n,  2);
+
+% figure how many timesteps for each data first
+for i=1:n
+    EEG = pop_loadset('filename', strcat(names{i}, '.set'), ...
     'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
-u = EEG.data;
+    u = EEG.data; 
+    seq_length = size(u, 2);
 
-timestep = size(u, 2);
-class = [0; 1]; 
-y = repmat(class, 1, timestep);
-intervals = [1 timestep];
+    if i > 1
+        intervals(i,:)=[intervals(i-1, 2)+1 intervals(i-1, 2)+seq_length];
+    else 
+        intervals(1,:)=[1 seq_length];
+    end
+end
 
-EEG = pop_loadset('filename','py5p.set', ...
+% allocate space for u and y
+u = ones(size(u, 1), intervals(n, 2));
+y = ones(2, intervals(n, 2));
+for i =1:n
+    EEG = pop_loadset('filename', strcat(names{i}, '.set'), ...
     'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
-timestep = size(EEG.data, 2);
-u = [u EEG.data];
-class = [1; 0]; 
-miney = repmat(class, 1, timestep);
-y = [y miney];
-intervals = [intervals; intervals(2)+1 intervals(2)+timestep];
+    current = EEG.data; 
+    u(:, intervals(i, 1):intervals(i, 2)) = current;
+    
+    % fill in teacher signal
+    % [1; 0] good learner
+    % [0; 1] bad learner
+    class = [0; 1];  % this needs to be changed 
+    current_y = repmat(class, 1, intervals(i, 2) - intervals(i, 1) + 1);
+    y(:, intervals(i, 1):intervals(i, 2)) = current_y;
+end
 
-% [1; 0] good learner
-% [0; 1] bad learner
+% very high values are rare?
+[u, max_u, min_u] = normalize_u(u);
 
 end
 

@@ -13,13 +13,15 @@ eeglab;
 cd ../esn
 
 %% parameters 
-alpha = 1.7; % leaky rate
+alpha = 0.001; % leaky rate
 NC = 12; % number of input channels
 NX = 150; % number of internal units
 LP = 2; % class number
-row = 9; % spetral radius
-in_scale = 13.3;% w_in will be sampled from [-in_scale, in_scale]
-bias_scale = 33; 
+row = 1; % spetral radius
+in_scale = 0.2; % w_in will be sampled from [-in_scale, in_scale]
+bias_scale = 0.1; 
+startPoint = 500; % cut off point for internal unit responses 
+reg = 1e-8; % regulization term
 
 % model construction
 [u, y, intervals] = loadData;
@@ -33,8 +35,11 @@ fprintf('Networks parameters: input channels: %d\n', NC);
 fprintf('Internal units size: %d Leaky rate %f\n', NX, alpha);
 fprintf('Spetrual radius  %f\n', row);
 fprintf('Input scale: %f Bias scale: %f\n', in_scale, bias_scale);
+fprintf('Response cutoff threshold: %d\n', startPoint);
+fprintf('Regulization term is: %f\n', reg);
 
-[M, w_out, x] = startTraining(u, y, x, w, w_in, alpha);
+[M, w_out, x] = startTraining(u, y, x, w, w_in, alpha, ... 
+                startPoint, intervals, reg);
 
 endTime = toc;
 fprintf('Training completed! Time spent: %f\n', endTime);
@@ -55,10 +60,10 @@ sum(predictTwo(1,:))
 sum(predictTwo(2,:))
 
 % visu classification 
-initP = 31500;
-endP = 32500;
+initP = 1;
+endP = 2000;
 visuClass(u, y, y_pre, initP, endP);
-unitS = 50;
+unitS = 27;
 visuUnits(M, initP, endP, unitS);
 
 
