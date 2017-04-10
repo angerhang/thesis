@@ -51,13 +51,12 @@ fprintf('Training completed! Time spent: %f\n', endTime);
 
 [y_pre] = exploit(w_out, w_in, w, alpha, u, LP, x);
 
-predictOne = y_pre(:, 1:intervals(1, 2));
-sum(predictOne(1,:))
-sum(predictOne(2,:))
+predictions = predict(y_pre, intervals);
 
-predictTwo = y_pre(:, intervals(2,1):intervals(2,2));
-sum(predictTwo(1,:))
-sum(predictTwo(2,:))
+[~, true_label] = max(y,[],2);
+[~, my_label] = max(predictions,[],2);
+error = sum(true_label ~= my_label);
+fprintf('The trianing error is %d\n', error);
 
 % visu classification 
 initP = 1;
