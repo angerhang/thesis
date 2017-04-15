@@ -11,6 +11,8 @@ train_e = zeros(k, 2);
 best_e = 1;
 w_out_opt = 0;
 x_opt = 0;
+test_er = 0;
+train_er = 0;
 
 for i=1:k
     % spliting 
@@ -38,6 +40,7 @@ for i=1:k
     fprintf('The trianing error is %d: %f percent\n', error, ...
         error/size(train_ints, 1));
     train_e(i) = error;
+    train_er = train_er +  error/size(train_ints, 1);
     
     % testing error 
     [test_u, ~, test_ints] = extractSequence(u, y, test_ints);
@@ -48,6 +51,7 @@ for i=1:k
     fprintf('The testing error is %d: %f percent\n', error, ...
         error/size(test_ints, 1));
     test_e(i) = error;
+    test_er = test_er + error/size(test_ints, 1);
     
     if (error < best_e)
         w_out_opt = w_out;
@@ -56,9 +60,9 @@ for i=1:k
 end
 
 fprintf('Overall training error is %d %f percent\n', mean(train_e), ...
-         mean(train_e)/ size(train_ints, 1));
+        train_er / k);
 fprintf('Overall testing error is %d %f percent\n', mean(test_e),  ... 
-         mean(test_e) / size(test_ints, 1));
+         test_er / k);
 
 
             
