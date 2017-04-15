@@ -11,9 +11,9 @@ function [M, w_out, x] = startTraining(U, y, x, w, w_in, ...
 % intervals: the range of each data entries
 % reg: regulization term
 
-t = size(U, 2);
+total_t = size(U, 2);
 % internal unit responses 
-xs = zeros(size(x, 1) + size(U, 1) +1 , t - startPoint); 
+xs = zeros(size(x, 1) + size(U, 1) +1 , total_t - startPoint); 
 
 % loop for each data entry 
 for i=1:size(intervals, 1)
@@ -41,8 +41,8 @@ end
 M = xs;
 
 xt = xs';
-yt = y(:, 1:(t - startPoint));
+yt = y(:, 1:(total_t - startPoint));
 % ridge regression
-w_out = yt * xt * inv(xs * xt + reg * eye(size(x, 1) + size(U, 1) + 1));
+w_out =  yt * xt * inv(xs * xt + reg * eye(size(x, 1) + size(U, 1) + 1));
 
  
