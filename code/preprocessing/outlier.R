@@ -43,6 +43,7 @@ labels <- newdata[, c("Code", "learn", "Age")]
 topredict <- saved_old[, c("Code", "learn", "Age")]
 write.csv(labels, file = "~/6thSemester/thesis/data/labels.csv")
 write.csv(topredict, file = "~/6thSemester/thesis/data/topredict.csv")
+ 
 
 
 

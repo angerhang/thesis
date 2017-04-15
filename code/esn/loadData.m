@@ -1,4 +1,4 @@
-function [u, y, intervals, max_u, min_u] = loadData
+function [u, y, intervals, true_labels, max_u, min_u] = loadData
 %loadData from the *.set files and create the class label
 % u: input sequence 12 * t
 % y: teacher signal 2 * t
@@ -6,13 +6,16 @@ function [u, y, intervals, max_u, min_u] = loadData
 % loading the training set 
 % output the high_v and low_v for input normalization
 
-load('names.mat');  % load the mat for training set
-n = size(names, 1);
+%load('names.mat');  % load the mat for training set
+load('names_labels.mat');
+n = size(Code, 1);
 intervals = ones(n,  2);
 
 % figure how many timesteps for each data first
-for i=1:n
-    EEG = pop_loadset('filename', strcat(names{i}, '.set'), ...
+for i=2:n
+    name = Code{i};
+    name = name(2:end-1);
+    EEG = pop_loadset('filename', strcat(name, '.set'), ...
     'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
     u = EEG.data; 
     seq_length = size(u, 2);
@@ -27,8 +30,11 @@ end
 % allocate space for u and y
 u = ones(size(u, 1), intervals(n, 2));
 y = ones(2, intervals(n, 2));
-for i =1:n
-    EEG = pop_loadset('filename', strcat(names{i}, '.set'), ...
+true_labels = ones(n, 1);
+for i =2:n
+    name = Code{i};
+    name = name(2:end-1);
+    EEG = pop_loadset('filename', strcat(name, '.set'), ...
     'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
     current = EEG.data; 
     u(:, intervals(i, 1):intervals(i, 2)) = current;
@@ -36,7 +42,13 @@ for i =1:n
     % fill in teacher signal
     % [1; 0] good learner
     % [0; 1] bad learner
-    class = [0; 1];  % this needs to be changed 
+    if (learn(i) == 1)
+        class = [1; 0];  
+        true_labels(i) = 1;
+    else 
+        class = [0; 1];
+        true_labels(i) = 2;
+    end
     current_y = repmat(class, 1, intervals(i, 2) - intervals(i, 1) + 1);
     y(:, intervals(i, 1):intervals(i, 2)) = current_y;
 end

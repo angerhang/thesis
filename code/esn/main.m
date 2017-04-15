@@ -24,7 +24,7 @@ startPoint = 500; % cut off point for internal unit responses
 reg = 1e-8; % regulization term
 
 % model construction
-[u, y, intervals] = loadData;
+[u, y, intervals, true_labels] = loadData;
 % simple custom inputs
 % [u, y] = simulate(100000);
 [x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
@@ -53,10 +53,11 @@ fprintf('Training completed! Time spent: %f\n', endTime);
 
 predictions = predict(y_pre, intervals);
 
-[~, true_label] = max(y,[],2);
-[~, my_label] = max(predictions,[],2);
-error = sum(true_label ~= my_label);
-fprintf('The trianing error is %d\n', error);
+% true label needs to be loaded with the intervals
+[~, my_labels] = max(predictions,[],2);
+error = sum(true_labels ~= my_labels);
+fprintf('The trianing error is %d: %f percent\n', error, ...
+    error/size(intervals, 1));
 
 % visu classification 
 initP = 1;
