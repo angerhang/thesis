@@ -18,7 +18,7 @@ for i=1:n
     name = Code{i};
     name = name(2:end-1);
     EEG = pop_loadset('filename', strcat(name, '.set'), ...
-    'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
+    'filepath','/Users/Hang/thesis/data/processed/');
     u = EEG.data; 
     seq_length = size(u, 2);
 
@@ -37,7 +37,7 @@ for i =1:n
     name = Code{i};
     name = name(2:end-1);
     EEG = pop_loadset('filename', strcat(name, '.set'), ...
-    'filepath','/Users/Hang/6thSemester/thesis/data/processed/');
+    'filepath','/Users/Hang/thesis/data/processed/');
     current = EEG.data; 
     u(:, intervals(i, 1):intervals(i, 2)) = current;
     
