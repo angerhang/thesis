@@ -8,11 +8,13 @@ function [u, y, intervals, true_labels, max_u, min_u] = loadData
 
 %load('names.mat');  % load the mat for training set
 load('names_labels.mat');
-n = size(Code, 1);
+n = size(Code, 1) - 1;
+Code = Code(2:end);
+learn = learn(2:end);
 intervals = ones(n,  2);
 
 % figure how many timesteps for each data first
-for i=2:n
+for i=1:n
     name = Code{i};
     name = name(2:end-1);
     EEG = pop_loadset('filename', strcat(name, '.set'), ...
@@ -31,7 +33,7 @@ end
 u = ones(size(u, 1), intervals(n, 2));
 y = ones(2, intervals(n, 2));
 true_labels = ones(n, 1);
-for i =2:n
+for i =1:n
     name = Code{i};
     name = name(2:end-1);
     EEG = pop_loadset('filename', strcat(name, '.set'), ...
