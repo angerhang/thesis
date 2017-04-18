@@ -21,8 +21,8 @@ row = 0.97; % spetral radius
 in_scale = 0.2; % w_in will be sampled from [-in_scale, in_scale]
 bias_scale = 0.1; 
 startPoint = 550; % cut off point for internal unit responses 
-reg = 1e-8; % regulization term
-k = 3;
+reg = 2.2e-05; % regulization term
+k = 5;
 
 % model construction
 [u, y, intervals, true_labels] = loadData;
@@ -31,6 +31,10 @@ k = 3;
 %% training
 % simple custom inputs
 % [u, y] = simulate(100000);
+erros = zeros(5, 3);
+
+tic;
+for i=1:5
 [x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
 fprintf('Networks parameters: input channels: %d\n', NC);
 fprintf('Internal units size: %d Leaky rate %f\n', NX, alpha);
@@ -39,12 +43,20 @@ fprintf('Input scale: %f Bias scale: %f\n', in_scale, bias_scale);
 fprintf('Response cutoff threshold: %d\n', startPoint);
 fprintf('Regulization term is: %f\n', reg);
 
-tic;
 fprintf('Start cross-validation ...\n');
 % cross validation
-[test_e, trian_e, train_er, test_er] = cross_validate(u, y, x, w, w_in, alpha,... 
+[~, ~, train_er, test_er] = cross_validate(u, y, x, w, w_in, alpha,... 
                 startPoint, intervals, reg, k, true_labels, LP);
+            
+erros(i, 1)= train_er;
+erros(i, 2)= test_er;
+erros(i, 3)= reg;
+reg = reg * 3;
 
+end
+timeUsed = toc;
+plot(erros(1:5, 3), erros(1:5,1), 'b', erros(1:5, 3), erros(1:5, 2), 'g');
+save('regerror.mat', 'erros');
 
 [M, w_out, x] = startTraining(u, y, x, w, w_in, alpha, ... 
                 startPoint, intervals, reg);
