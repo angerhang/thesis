@@ -1,11 +1,20 @@
 function [train_e, test_e, train_er, test_er] = cross_validate(u, y, x, w, ...
               w_in, alpha, startPoint, intervals, reg, k, true_labels, LP)
 % this script splits the whole data set into k folds and 
+% we use a stratefied approach 
 % report the training and testing error along with their visus
 % test_e and train_e will just be a vector of size k
 % M, w_out, x will be the optimal parameters taken from the best fold
 
-indices = crossvalind('Kfold', size(intervals, 1), k);
+
+% might need to change if having more classes
+rng('default');
+one_len = sum(true_labels == 1);
+two_len = sum(true_labels == 2);
+indices_one = crossvalind('Kfold', one_len, k);
+indices_two = crossvalind('Kfold', two_len, k);
+indices = [indices_two; indices_one];
+
 test_e = zeros(k, 1);
 train_e = zeros(k, 1);
 test_er = 0;

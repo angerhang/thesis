@@ -13,6 +13,7 @@ function [x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale)
 % bias_scale and in_scale: range of the columns of w should be sampled
 
 % generate output 
+rng('default');
 w_bias = rand(NX, 1) * 2 * bias_scale - bias_scale;
 w_ins = rand(NX, NC) * 2 * in_scale - in_scale;
 w_in = [w_bias w_ins];
