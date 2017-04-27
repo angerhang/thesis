@@ -20,21 +20,22 @@ train_e = zeros(k, 1);
 test_er = 0;
 train_er = 0;
 
+[M, new_y, new_intervals] = collectM(u, y, x, w, w_in, ...
+                                       alpha, startPoint, intervals);
+                                   
 for i=1:k
     % spliting 
     fprintf('Epoch %d out of %d folds\n', i, k);
     test = (indices == i); train = ~test;
-    train_ints = intervals(train, :);
+    train_ints = new_intervals(train, :);
     train_labels = true_labels(train, :);
     test_ints = intervals(test, :);
     test_labels = true_labels(test, :);
 
     % training
-    [train_u, train_y, train_ints] = extractSequence(u, y, train_ints);
+    [w_out] = kfold_train(M, new_y, train_ints, size(w_in, 2), reg);         
     
-    [~, w_out, x] = startTraining(train_u, train_y, x, w, w_in, alpha, ... 
-                startPoint, train_ints, reg);
-    
+    [train_u, ~, train_ints] = extractSequence(u, y, train_ints);
     [y_pre] = exploit(w_out, w_in, w, alpha, train_u, LP, x);
 
     predictions = predict(y_pre, train_ints);
