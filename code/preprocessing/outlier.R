@@ -1,4 +1,4 @@
-mydata <- read.csv("~/6thSemester/thesis/data/subject_meta.csv")
+mydata <- read.csv("~/thesis/data/subject_meta.csv")
 
 # reformat row name
 chars <- as.character(mydata$Code)
@@ -41,9 +41,10 @@ saved_old = old[old$learn == 1, ]
 newdata <- rbind(tomerge_old, young)
 labels <- newdata[, c("Code", "learn", "Age")]
 topredict <- saved_old[, c("Code", "learn", "Age")]
-write.csv(labels, file = "~/6thSemester/thesis/data/labels.csv")
-write.csv(topredict, file = "~/6thSemester/thesis/data/topredict.csv")
+write.csv(labels, file = "~/thesis/data/labels.csv")
+write.csv(topredict, file = "~/thesis/data/topredict.csv")
  
-
+# second model
+write.csv(old, file = "~/thesis/data/secondPredict.csv")
 
 
