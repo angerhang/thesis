@@ -1,0 +1,12 @@
+\nomenclatureentry{a\textbf{EEG}@[{\textbf{EEG}}]\begingroup Electroencephalogram\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{a\textbf{BCIs}@[{\textbf{BCIs}}]\begingroup Brain-Computer Interfaces\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{a\textbf{RNNs}@[{\textbf{RNNs}}]\begingroup Recurrent Neural Networks\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{a\textbf{ESNs}@[{\textbf{ESNs}}]\begingroup Echo State Networks\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{a\textbf{MLS}@[{\textbf{MLS}}]\begingroup  Motor Learning Skills\nomeqref {0}|nompageref}{iii}
+\nomenclatureentry{a\textbf{SVMs}@[{\textbf{SVMs}}]\begingroup Support Vector Machines\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a\textbf{FNNs}@[{\textbf{FNNs}}]\begingroup Feedforward Neural Networks\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a\textbf{MSE}@[{\textbf{MSE}}]\begingroup Mean Square Error\nomeqref {2}|nompageref}{4}
+\nomenclatureentry{a\textbf{MC}@[{\textbf{MC}}]\begingroup Memory Capacity\nomeqref {7}|nompageref}{5}
+\nomenclatureentry{a\textbf{DL}@[{\textbf{DL}}]\begingroup Deep Learning\nomeqref {9}|nompageref}{7}
+\nomenclatureentry{a\textbf{LDA}@[{\textbf{LDA}}]\begingroup Linear Discriminant Analysis\nomeqref {10}|nompageref}{8}
+\nomenclatureentry{a\textbf{MLP}@[{\textbf{MLP}}]\begingroup  Multilayer Perceptron\nomeqref {10}|nompageref}{8}

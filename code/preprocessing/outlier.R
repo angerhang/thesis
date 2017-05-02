@@ -50,5 +50,17 @@ write.csv(old, file = "~/thesis/data/secondPredict.csv")
 third_data = rbind(saved_old, young);
 write.csv(third_data, file = '~/thesis/data/thirdPredict.csv')
 
+# scatterplot
+library(plotly)
+old$learn = 1
+old[old$RMSE_rel > median(old$RMSE_rel), ]$learn = 2
+old[old$RMSE_rel <= median(old$RMSE_rel), ]$learn = 3
+completedata <- rbind(old, young)
+p <- plot_ly(data = completedata, x = ~RMSE_rel, y = ~Age, color=~learn)
+p
+
+
+
+
 
 

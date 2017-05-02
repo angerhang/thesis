@@ -1,0 +1,30 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{\textbf{BCIs}}]\begingroup Brain-Computer Interfaces\nomeqref {0}
+		\nompageref{iii}
+  \item [{\textbf{DL}}]\begingroup Deep Learning\nomeqref {9}
+		\nompageref{6}
+  \item [{\textbf{EEG}}]\begingroup Electroencephalogram\nomeqref {0}
+		\nompageref{iii}
+  \item [{\textbf{ESNs}}]\begingroup Echo State Networks\nomeqref {0}
+		\nompageref{iii}
+  \item [{\textbf{FNNs}}]\begingroup Feedforward Neural Networks\nomeqref {0}
+		\nompageref{1}
+  \item [{\textbf{LDA}}]\begingroup Linear Discriminant Analysis\nomeqref {10}
+		\nompageref{7}
+  \item [{\textbf{MC}}]\begingroup Memory Capacity\nomeqref {7}
+		\nompageref{4}
+  \item [{\textbf{MLP}}]\begingroup  Multilayer Perceptron\nomeqref {10}
+		\nompageref{7}
+  \item [{\textbf{MLS}}]\begingroup  Motor Learning Skills\nomeqref {0}
+		\nompageref{iii}
+  \item [{\textbf{MSE}}]\begingroup Mean Square Error\nomeqref {2}
+		\nompageref{3}
+  \item [{\textbf{RNNs}}]\begingroup Recurrent Neural Networks\nomeqref {0}
+		\nompageref{iii}
+  \item [{\textbf{SVMs}}]\begingroup Support Vector Machines\nomeqref {0}
+		\nompageref{1}
+
+\end{thenomenclature}

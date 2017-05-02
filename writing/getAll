@@ -1,0 +1,6 @@
+#!/bin/sh
+# get glossary
+pdflatex thesis.tex
+makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+bibtex thesis.tex 
+

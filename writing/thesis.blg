@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/MacPorts 2015_8)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: thesis.bib
+Warning--empty journal in davidverstraeten2009
+Warning--can't use both volume and number fields in kohavi1995study
+You've used 42 entries,
+            1791 wiz_defined-function locations,
+            699 strings with 12055 characters,
+and the built_in function-call counts, 11436 in all, are:
+= -- 1067
+> -- 483
+< -- 16
++ -- 179
+- -- 137
+* -- 793
+:= -- 1730
+add.period$ -- 137
+call.type$ -- 42
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 44
+duplicate$ -- 521
+empty$ -- 1096
+format.name$ -- 137
+if$ -- 2604
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 45
+newline$ -- 213
+num.names$ -- 42
+pop$ -- 129
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 262
+stack$ -- 0
+substring$ -- 864
+swap$ -- 163
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 118
+width$ -- 44
+write$ -- 470
+(There were 2 warnings)

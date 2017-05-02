@@ -1,0 +1,260 @@
+\begin{thebibliography}{10}
+
+\bibitem{zhang2015efficient}
+Rui Zhang, Dezhong Yao, Pedro~A Vald{\'e}s-Sosa, Fali Li, Peiyang Li, Tao
+  Zhang, Teng Ma, Yongjie Li, and Peng Xu.
+\newblock Efficient resting-state {EEG} network facilitates motor imagery
+  performance.
+\newblock {\em Journal of Neural Engineering}, 12(6):066024, 2015.
+
+\bibitem{ozdenizci2016resting}
+Ozan {\"O}zdenizci, Mustafa Yal{\c{c}}{\i}n, Ahmetcan Erdo{\u{g}}an, Volkan
+  Pato{\u{g}}lu, Moritz Grosse-Wentrup, and M{\"u}jdat Cetin.
+\newblock Resting-state {EEG} correlates of motor learning performance in a
+  force-field adaptation task.
+\newblock In {\em Signal Processing and Communication Application Conference
+  (SIU), 2016 24th}, pages 2253--2256. IEEE, 2016.
+
+\bibitem{Doppelmayr2002289}
+M.~Doppelmayr, W.~Klimesch, W.~Stadler, D.~Pöllhuber, and C.~Heine.
+\newblock {EEG} alpha power and intelligence.
+\newblock {\em Intelligence}, 30(3):289 -- 302, 2002.
+
+\bibitem{jaeger2001echo}
+Herbert Jaeger.
+\newblock The “echo state” approach to analysing and training recurrent
+  neural networks-with an erratum note.
+\newblock {\em Bonn, Germany: German National Research Center for Information
+  Technology GMD Technical Report}, 148(34):13, 2001.
+
+\bibitem{maass2002real}
+Wolfgang Maass, Thomas Natschl{\"a}ger, and Henry Markram.
+\newblock Real-time computing without stable states: A new framework for neural
+  computation based on perturbations.
+\newblock {\em Neural Computation}, 14(11):2531--2560, 2002.
+
+\bibitem{lipton2015critical}
+Zachary~C Lipton, John Berkowitz, and Charles Elkan.
+\newblock A critical review of recurrent neural networks for sequence learning.
+\newblock {\em arXiv preprint arXiv:1506.00019}, 2015.
+
+\bibitem{bengio1994learning}
+Yoshua Bengio, Patrice Simard, and Paolo Frasconi.
+\newblock Learning long-term dependencies with gradient descent is difficult.
+\newblock {\em IEEE transactions on Neural Networks}, 5(2):157--166, 1994.
+
+\bibitem{buteneers2008real}
+Pieter Buteneers, Benjamin Schrauwen, David Verstraeten, and Dirk Stroobandt.
+\newblock Real-time epileptic seizure detection on intra-cranial rat data using
+  reservoir computing.
+\newblock In {\em International Conference on Neural Information Processing},
+  pages 56--63. Springer, 2008.
+
+\bibitem{naderi2010analysis}
+Mohammad~Ali Naderi and Homayoun Mahdavi-Nasab.
+\newblock Analysis and classification of {EEG} signals using spectral analysis
+  and recurrent neural networks.
+\newblock In {\em Biomedical Engineering (ICBME), 2010 17th Iranian Conference
+  of}, pages 1--4. IEEE, 2010.
+
+\bibitem{petrosian2001recurrent}
+AA~Petrosian, DV~Prokhorov, W~Lajara-Nanson, and RB~Schiffer.
+\newblock Recurrent neural network-based approach for early recognition of
+  alzheimer's disease in eeg.
+\newblock {\em Clinical Neurophysiology}, 112(8):1378--1387, 2001.
+
+\bibitem{ubeyli2008multiclass}
+Elif~Derya {\"U}beyli.
+\newblock Multiclass support vector machines for diagnosis of
+  erythemato-squamous diseases.
+\newblock {\em Expert Systems with Applications}, 35(4):1733--1740, 2008.
+
+\bibitem{lukovsevivcius2012practical}
+Mantas Luko{\v{s}}evi{\v{c}}ius.
+\newblock A practical guide to applying echo state networks.
+\newblock In {\em Neural Networks: Tricks of the Trade}, pages 659--686.
+  Springer, 2012.
+
+\bibitem{davidverstraeten2009}
+David Verstraeten.
+\newblock Reservoir computing: computation with dynamical systems.
+\newblock 2009.
+
+\bibitem{maass2007computational}
+Wolfgang Maass, Prashant Joshi, and Eduardo~D Sontag.
+\newblock Computational aspects of feedback in neural circuits.
+\newblock {\em PLoS Comput Biol}, 3(1):e165, 2007.
+
+\bibitem{Kahan1965}
+W.~Kahan.
+\newblock Pracniques: Further remarks on reducing truncation errors.
+\newblock {\em Commun. ACM}, 8(1):40--, January 1965.
+
+\bibitem{jaeger2001short}
+Herbert Jaeger.
+\newblock {\em Short term memory in echo state networks}, volume~5.
+\newblock GMD-Forschungszentrum Informationstechnik, 2001.
+
+\bibitem{schrauwen2007introduction}
+Benjamin Schrauwen, Jeroen Defour, David Verstraeten, and Jan Van~Campenhout.
+\newblock The introduction of time-scales in reservoir computing, applied to
+  isolated digits recognition.
+\newblock In {\em International Conference on Artificial Neural Networks},
+  pages 471--479. Springer, 2007.
+
+\bibitem{niedermeyer2005electroencephalography}
+Ernst Niedermeyer and FH~Lopes da~Silva.
+\newblock {\em Electroencephalography: basic principles, clinical applications,
+  and related fields}.
+\newblock Lippincott Williams \& Wilkins, 2005.
+
+\bibitem{cohen2014analyzing}
+Mike~X Cohen.
+\newblock {\em Analyzing neural time series data: theory and practice}.
+\newblock MIT Press, 2014.
+
+\bibitem{cohen2011s}
+Michael~X Cohen.
+\newblock It’s about time.
+\newblock {\em Approaches and Assumptions in Human Neuroscience}, page~4, 2011.
+
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1097--1105, 2012.
+
+\bibitem{farabet2013learning}
+Clement Farabet, Camille Couprie, Laurent Najman, and Yann LeCun.
+\newblock Learning hierarchical features for scene labeling.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  35(8):1915--1929, 2013.
+
+\bibitem{bordes2014question}
+Antoine Bordes, Sumit Chopra, and Jason Weston.
+\newblock Question answering with subgraph embeddings.
+\newblock {\em arXiv preprint arXiv:1406.3676}, 2014.
+
+\bibitem{luong2014addressing}
+Minh-Thang Luong, Ilya Sutskever, Quoc~V Le, Oriol Vinyals, and Wojciech
+  Zaremba.
+\newblock Addressing the rare word problem in neural machine translation.
+\newblock {\em arXiv preprint arXiv:1410.8206}, 2014.
+
+\bibitem{comon1994independent}
+Pierre Comon.
+\newblock Independent component analysis, a new concept?
+\newblock {\em Signal processing}, 36(3):287--314, 1994.
+
+\bibitem{jung2000removing}
+Tzyy-Ping Jung, Scott Makeig, Colin Humphries, Te-Won Lee, Martin~J Mckeown,
+  Vicente Iragui, and Terrence~J Sejnowski.
+\newblock Removing electroencephalographic artifacts by blind source
+  separation.
+\newblock {\em Psychophysiology}, 37(2):163--178, 2000.
+
+\bibitem{lotte2007review}
+Fabien Lotte, Marco Congedo, Anatole L{\'e}cuyer, Fabrice Lamarche, and Bruno
+  Arnaldi.
+\newblock A review of classification algorithms for {EEG}-based brain--computer
+  interfaces.
+\newblock {\em Journal of Neural Engineering}, 4(2):R1, 2007.
+
+\bibitem{bennett2000support}
+Kristin~P Bennett and Colin Campbell.
+\newblock Support vector machines: hype or hallelujah?
+\newblock {\em ACM SIGKDD Explorations Newsletter}, 2(2):1--13, 2000.
+
+\bibitem{anderson1996classification}
+Charles~W Anderson and Zlatko Sijercic.
+\newblock Classification of {EEG} signals from four subjects during five mental
+  tasks.
+\newblock In {\em Solving Engineering Problems with Neural Networks:
+  proceedings of the conference on engineering applications in neural networks
+  (EANN’96)}, pages 407--414. Turkey, 1996.
+
+\bibitem{palaniappan2005brain}
+Ramaswamy Palaniappan.
+\newblock Brain computer interface design using band powers extracted during
+  mental tasks.
+\newblock In {\em Neural Engineering, 2005. Conference Proceedings. 2nd
+  International IEEE EMBS Conference on}, pages 321--324. IEEE, 2005.
+
+\bibitem{balakrishnan2005multilayer}
+Divya Balakrishnan and Sadasivan Puthusserypady.
+\newblock Multilayer perceptrons for the classification of brain computer
+  interface data.
+\newblock In {\em Bioengineering Conference, 2005. Proceedings of the IEEE 31st
+  Annual Northeast}, pages 118--119. IEEE, 2005.
+
+\bibitem{millan2004noninvasive}
+Jd~R Millan, Frederic Renkens, Josep Mourino, and Wulfram Gerstner.
+\newblock Noninvasive brain-actuated control of a mobile robot by human {EEG}.
+\newblock {\em IEEE Transactions on Biomedical Engineering}, 51(6):1026--1033,
+  2004.
+
+\bibitem{millan2000local}
+J~del~R Mill{\'a}n, Josep Mourino, Fabio Babiloni, Febo Cincotti, Markus
+  Varsta, and Jukka Heikkonen.
+\newblock Local neural classifier for {EEG}-based recognition of mental tasks.
+\newblock In {\em Neural Networks, 2000. IJCNN 2000, Proceedings of the
+  IEEE-INNS-ENNS International Joint Conference on}, volume~3, pages 632--636.
+  IEEE, 2000.
+
+\bibitem{mitul2013classification}
+Abu~Farzan Mitul, Md~Jubayer~Alam Rabin, Muhammad Rakeeb, Abdullah Al~Mamun
+  Khan, GM~Sultan~Mahmud Rana, AbuShahab Mollah, and Md~Hafizur Rahman.
+\newblock Classification of real time moving object using echo state network.
+\newblock In {\em Informatics, Electronics \& Vision (ICIEV), 2013
+  International Conference on}, pages 1--6. IEEE, 2013.
+
+\bibitem{ongenae2013time}
+Femke Ongenae, Stijn Van~Looy, David Verstraeten, Thierry Verplancke, Dominique
+  Benoit, Filip De~Turck, Tom Dhaene, Benjamin Schrauwen, and Johan
+  Decruyenaere.
+\newblock Time series classification for the prediction of dialysis in
+  critically ill patients using echo statenetworks.
+\newblock {\em Engineering Applications of Artificial Intelligence},
+  26(3):984--996, 2013.
+
+\bibitem{thatcher2005eeg}
+Robert~W Thatcher, Duane North, and C~Biver.
+\newblock {EEG} and intelligence: relations between {EEG} coherence, {EEG}
+  phase delay and power.
+\newblock {\em Clinical neurophysiology}, 116(9):2129--2141, 2005.
+
+\bibitem{davidson2003affective}
+Richard~J Davidson.
+\newblock Affective neuroscience and psychophysiology: toward a synthesis.
+\newblock {\em Psychophysiology}, 40(5):655--665, 2003.
+
+\bibitem{kounios2008origins}
+John Kounios, Jessica~I Fleck, Deborah~L Green, Lisa Payne, Jennifer~L
+  Stevenson, Edward~M Bowden, and Mark Jung-Beeman.
+\newblock The origins of insight in resting-state brain activity.
+\newblock {\em Neuropsychologia}, 46(1):281--291, 2008.
+
+\bibitem{wu2014resting}
+Jennifer Wu, Ramesh Srinivasan, Arshdeep Kaur, and Steven~C Cramer.
+\newblock Resting-state cortical connectivity predicts motor skill acquisition.
+\newblock {\em NeuroImage}, 91:84--90, 2014.
+
+\bibitem{jasper1958ten}
+Herbert~H Jasper.
+\newblock The ten twenty electrode system of the international federation.
+\newblock {\em Electroencephalography and clinical neurophysiology},
+  10:371--375, 1958.
+
+\bibitem{delorme2004eeglab}
+Arnaud Delorme and Scott Makeig.
+\newblock Eeglab: an open source toolbox for analysis of single-trial eeg
+  dynamics including independent component analysis.
+\newblock {\em Journal of neuroscience methods}, 134(1):9--21, 2004.
+
+\bibitem{kohavi1995study}
+Ron Kohavi et~al.
+\newblock A study of cross-validation and bootstrap for accuracy estimation and
+  model selection.
+\newblock In {\em Ijcai}, volume~14, pages 1137--1145. Stanford, CA, 1995.
+
+\end{thebibliography}

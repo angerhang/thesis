@@ -1,16 +1,22 @@
-function [u, y, intervals, true_labels, max_u, min_u] = loadData
+function [u, y, intervals, true_labels, max_u, min_u] = loadData(option)
 %loadData from the *.set files and create the class label
 % u: input sequence 12 * t
 % y: teacher signal 2 * t
 % intervals: the starting and end time for each input sequence 
 % loading the training set 
 % output the high_v and low_v for input normalization
+% option: use to load 1st or 2nd set of data
 
 %load('names.mat');  % load the mat for training set
-load('names_labels.mat');
-n = size(Code, 1) - 1;
-Code = Code(2:end);
-learn = learn(2:end);
+if option == 1
+    load('names_labels.mat');
+elseif option == 2
+    load('seconddata.mat');
+else 
+    load('thirdGroup.mat');
+end
+
+n = size(Code, 1);
 intervals = ones(n,  2);
 
 % figure how many timesteps for each data first
