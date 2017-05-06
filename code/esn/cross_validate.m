@@ -50,8 +50,13 @@ for i=1:k
     train_er = train_er +  error/size(train_ints, 1);
     
     % testing error 
-    [test_u, ~, test_ints] = extractSequence(u, y, test_ints);
-    [y_pre] = exploit(w_out, w_in, w, alpha, test_u, LP, x);
+    [test_u, test_y, test_ints] = extractSequence(u, y, test_ints);
+    y_pre = zeros(2, test_ints(size(test_ints, 1), 2));
+    for j = 1:size(test_ints, 1)
+        y_pre(:, test_ints(j, 1):test_ints(j, 2)) ...
+         =  exploit(w_out, w_in, w, alpha, ... 
+         test_u(:, test_ints(j,1):test_ints(j, 2)), LP, x);
+    end
     predictions = predict(y_pre, test_ints);
     [~, my_labels] = max(predictions,[],2);
     error = sum(test_labels ~= my_labels);
