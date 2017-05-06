@@ -7,7 +7,7 @@ function preprocess(dataName)
 %      d. filtering: with bandpass 1-40Hz (notch to do)
 %      e. ICA to do
 dataName = strcat(dataName);
-dataPath = strcat('/Users/Hang/6thSemester/thesis/data/raw_eeg/', ...
+dataPath = strcat('/Users/Hang/thesis/data/raw_eeg/', ...
             dataName, '.bdf');
 
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
@@ -15,7 +15,7 @@ EEG = pop_biosig(dataPath);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'gui','off'); 
 EEG = eeg_checkset( EEG );
 pop_eegplot( EEG, 1, 1, 1);
-EEG=pop_chanedit(EEG, 'lookup','/Users/Hang/6thSemester/thesis/code/eeglab/plugins/dipfit2.3/standard_BESA/standard-10-5-cap385.elp');
+EEG=pop_chanedit(EEG, 'lookup','/Users/Hang/thesis/code/eeglab/plugins/dipfit2.3/standard_BESA/standard-10-5-cap385.elp');
 [ALLEEG EEG] = eeg_store(ALLEEG, EEG, CURRENTSET);
 EEG = eeg_checkset( EEG );
 EEG = pop_select( EEG,'channel',{'F3' 'C3' 'P3' 'Pz' 'O1' 'Oz' ...
