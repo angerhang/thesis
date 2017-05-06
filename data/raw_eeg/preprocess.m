@@ -11,6 +11,7 @@ dataPath = strcat('/Users/Hang/thesis/data/raw_eeg/', ...
             dataName, '.bdf');
 
 [ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
+
 EEG = pop_biosig(dataPath);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'gui','off'); 
 EEG = eeg_checkset( EEG );
@@ -22,9 +23,17 @@ EEG = pop_select( EEG,'channel',{'F3' 'C3' 'P3' 'Pz' 'O1' 'Oz' ...
     'O2' 'P4' 'C4' 'F4' 'Fz' 'Cz'});
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 1,'gui','off'); 
 EEG = eeg_checkset( EEG );
-EEG = pop_resample( EEG, 512);
+EEG = pop_resample( EEG, 256);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 2,'gui','off'); 
 EEG = pop_eegfiltnew(EEG, 1,40,1690,0,[],1);
+
+EEG = pop_runica(EEG, 'extended',1,'interupt','off');
+[~, ~, ~, artcmps] = processMARA ( ALLEEG,EEG,CURRENTSET );
+
+if ~isempty(artcmps)
+   EEG = pop_subcomp( EEG, artcmps, 0);
+    [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 3,'gui','off');  
+end
 
 % saving procedure
 cd ../processed/
