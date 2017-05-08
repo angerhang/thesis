@@ -35,10 +35,11 @@ for i=1:k
     % training
     [w_out] = kfold_train(M, new_y, train_ints, size(w_in, 2), reg);         
     
-    [train_u, ~, train_ints] = extractSequence(u, y, train_ints);
+    train_ints = intervals(train, :);
+    [train_u, train_y, train_ints] = extractSequence(u, y, train_ints);
     [y_pre] = exploit(w_out, w_in, w, alpha, train_u, LP, x);
 
-    predictions = predict(y_pre, train_ints);
+    predictions = predict(y_pre, train_ints, startPoint);
 
     % training error 
     % true label needs to be loaded with the intervals
@@ -57,7 +58,7 @@ for i=1:k
          =  exploit(w_out, w_in, w, alpha, ... 
          test_u(:, test_ints(j,1):test_ints(j, 2)), LP, x);
     end
-    predictions = predict(y_pre, test_ints);
+    predictions = predict(y_pre, test_ints, startPoint);
     [~, my_labels] = max(predictions,[],2);
     error = sum(test_labels ~= my_labels);
     fprintf('The testing error is %d: %f percent\n', error, ...
