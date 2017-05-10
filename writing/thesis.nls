@@ -5,26 +5,34 @@
   \item [{\textbf{BCIs}}]\begingroup Brain-Computer Interfaces\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{DL}}]\begingroup Deep Learning\nomeqref {9}
-		\nompageref{6}
+		\nompageref{7}
   \item [{\textbf{EEG}}]\begingroup Electroencephalogram\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{ESNs}}]\begingroup Echo State Networks\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{FNNs}}]\begingroup Feedforward Neural Networks\nomeqref {0}
-		\nompageref{1}
+		\nompageref{2}
   \item [{\textbf{LDA}}]\begingroup Linear Discriminant Analysis\nomeqref {10}
-		\nompageref{7}
+		\nompageref{8}
+  \item [{\textbf{MARA}}]\begingroup Multiple Artifact Rejection Algorithm\nomeqref {10}
+		\nompageref{8}
   \item [{\textbf{MC}}]\begingroup Memory Capacity\nomeqref {7}
-		\nompageref{4}
+		\nompageref{5}
   \item [{\textbf{MLP}}]\begingroup  Multilayer Perceptron\nomeqref {10}
-		\nompageref{7}
+		\nompageref{8}
   \item [{\textbf{MLS}}]\begingroup  Motor Learning Skills\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{MSE}}]\begingroup Mean Square Error\nomeqref {2}
-		\nompageref{3}
+		\nompageref{4}
+  \item [{\textbf{OH}}]\begingroup Old high performers\nomeqref {10}
+		\nompageref{14}
+  \item [{\textbf{OL}}]\begingroup Old low performers\nomeqref {10}
+		\nompageref{14}
   \item [{\textbf{RNNs}}]\begingroup Recurrent Neural Networks\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{SVMs}}]\begingroup Support Vector Machines\nomeqref {0}
-		\nompageref{1}
+		\nompageref{2}
+  \item [{\textbf{YH}}]\begingroup Young high performers\nomeqref {10}
+		\nompageref{14}
 
 \end{thenomenclature}

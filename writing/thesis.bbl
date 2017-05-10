@@ -77,8 +77,8 @@ Mantas Luko{\v{s}}evi{\v{c}}ius.
 
 \bibitem{davidverstraeten2009}
 David Verstraeten.
-\newblock Reservoir computing: computation with dynamical systems.
-\newblock 2009.
+\newblock {\em Reservoir Computing: computation with dynamical systems}.
+\newblock PhD thesis, 2009.
 
 \bibitem{maass2007computational}
 Wolfgang Maass, Prashant Joshi, and Eduardo~D Sontag.
@@ -87,12 +87,12 @@ Wolfgang Maass, Prashant Joshi, and Eduardo~D Sontag.
 
 \bibitem{Kahan1965}
 W.~Kahan.
-\newblock Pracniques: Further remarks on reducing truncation errors.
+\newblock Further remarks on reducing truncation errors.
 \newblock {\em Commun. ACM}, 8(1):40--, January 1965.
 
 \bibitem{jaeger2001short}
 Herbert Jaeger.
-\newblock {\em Short term memory in echo state networks}, volume~5.
+\newblock {\em Short term memory in echo state networks}.
 \newblock GMD-Forschungszentrum Informationstechnik, 2001.
 
 \bibitem{schrauwen2007introduction}
@@ -115,8 +115,8 @@ Mike~X Cohen.
 
 \bibitem{cohen2011s}
 Michael~X Cohen.
-\newblock It’s about time.
-\newblock {\em Approaches and Assumptions in Human Neuroscience}, page~4, 2011.
+\newblock It`s about time.
+\newblock {\em Approaches and Assumptions in Human Neuroscience}, 2011.
 
 \bibitem{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
@@ -152,6 +152,12 @@ Tzyy-Ping Jung, Scott Makeig, Colin Humphries, Te-Won Lee, Martin~J Mckeown,
 \newblock Removing electroencephalographic artifacts by blind source
   separation.
 \newblock {\em Psychophysiology}, 37(2):163--178, 2000.
+
+\bibitem{Winkler2011}
+Irene Winkler, Stefan Haufe, and Michael Tangermann.
+\newblock Automatic classification of artifactual ica-components for artifact
+  removal in eeg signals.
+\newblock {\em Behavioral and Brain Functions}, 7(1):30, 2011.
 
 \bibitem{lotte2007review}
 Fabien Lotte, Marco Congedo, Anatole L{\'e}cuyer, Fabrice Lamarche, and Bruno
@@ -245,16 +251,22 @@ Herbert~H Jasper.
 \newblock {\em Electroencephalography and clinical neurophysiology},
   10:371--375, 1958.
 
+\bibitem{klem1999ten}
+George~H Klem, Hans~Otto L{\"u}ders, HH~Jasper, C~Elger, et~al.
+\newblock The ten-twenty electrode system of the international federation.
+\newblock {\em Electroencephalogr Clin Neurophysiol}, 52(3):3--6, 1999.
+
 \bibitem{delorme2004eeglab}
 Arnaud Delorme and Scott Makeig.
-\newblock Eeglab: an open source toolbox for analysis of single-trial eeg
+\newblock {EEGLAB}: an open source toolbox for analysis of single-trial {EEG}
   dynamics including independent component analysis.
-\newblock {\em Journal of neuroscience methods}, 134(1):9--21, 2004.
+\newblock {\em Journal of Neuroscience Methods}, 134(1):9--21, 2004.
 
 \bibitem{kohavi1995study}
 Ron Kohavi et~al.
 \newblock A study of cross-validation and bootstrap for accuracy estimation and
   model selection.
-\newblock In {\em Ijcai}, volume~14, pages 1137--1145. Stanford, CA, 1995.
+\newblock In {\em International Joint Conference on Artificial Intelligence},
+  volume~14, pages 1137--1145. Stanford, CA, 1995.
 
 \end{thebibliography}

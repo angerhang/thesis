@@ -122,10 +122,9 @@ measurements, and thus more involved analytical tools are needed. Recurrent Neur
 are particularly suitable for dealing with EEG because RNNs can capture the critical spatiotemporal characteristics
 that EEG contains.
 
-In this project, we would like to use
- Echo State Networks (ESNs), \nomenclature{\textbf{ESNs}}{Echo State Networks} a variant of RNNs, known for their ease of training, to try to classify 
- the  people's Motor Learning Skills (MLS), \nomenclature{\textbf{MLS}}{ Motor Learning Skills} given the resting state EEG recording. The hope is to use nonlinear approaches 
-like ESNs to find out if such a correlation exists between resting state EEG and MLS and at the same time to explore ESNs' limitations in dealing with such dynamical patterns.
+In this project, we successfully applied
+ Echo State Networks (ESNs), \nomenclature{\textbf{ESNs}}{Echo State Networks} to classify 
+ the  people's Motor Learning Skills (MLS), \nomenclature{\textbf{MLS}}{ Motor Learning Skills} given the resting state EEG recording, and confirm that hypothesis \todo{need to fill in after discussion}
 
 \newpage
 \tableofcontents
@@ -141,7 +140,7 @@ like ESNs to find out if such a correlation exists between resting state EEG and
 
 %% 
 \section{Introduction}
-
+\todo{OK to use abberviation in abstract?}
 Given the long history of EEG studies, we have already decoded its relationships with a few brain processes like one's motor learning, motor imagery performance and even intelligence \cite{zhang2015efficient} \cite{ozdenizci2016resting}\cite{Doppelmayr2002289}.  Pursuing this line of inquiry this guided research plans to investigate if there exists a correlation between EEG signal and subjects'  MLS, a latent variable that we will introduce more formally later.
 
 
@@ -153,12 +152,11 @@ for a sequence learning task (EEG classification)  \cite{lipton2015critical}. St
 Machines (SVMs) and \nomenclature{\textbf{SVMs}}{Support Vector Machines} Feed-Forward Neural Networks (FNNs) 
   \nomenclature{\textbf{FNNs}}{Feedforward Neural Networks} have 
 achieved excellent results on numerous learning tasks without explicitly modeling sequentiality. They can even
-combine inputs within a window of time frame for a model to encode the time dependency. Nevertheless, these static models won't be able to answer the questions about the events that occur outside the binned time steps. That's where RNNs come to rescue.
+combine inputs within a window of time frame for a model to encode the time dependency. Nevertheless, these static models cannot answer the questions about the events that occur outside the binned time steps. That's where RNNs come to rescue.
 RNNs are a kind of neural networks whose units form directed cycles. The input is of the form $(x^1, x^2, \dots, x^T)$
-and the corresponding labels for each time step is of the form $(y^1, y^2, \dots, y^T)$, where T is the number of discretized time steps we have. 
+and the corresponding labels for each time step is of the form $(y^1, y^2, \dots, y^T)$, where T is the number of time steps we have. 
 
-It is empirically difficult to train RNNs mainly due to vanishing gradient and exploding gradient as most training techniques 
-are gradient based \cite{bengio1994learning}. Standard methods like backpropagation through time
+It is empirically difficult to train RNNs mainly due to vanishing gradient and exploding gradient \cite{bengio1994learning}. Standard methods like backpropagation through time
 and real time recurrent learning suffer from the vanishing gradients since they both  use the error gradient
 taken from the objective function, and the gradient values become very small already after several steps.
 
@@ -177,8 +175,8 @@ do and how to interpret the results. Finally, we present the projected schedule 
 
 \section{Theoretical Frameworks}
 \subsection{Echo State Networks (ESNs)}
-We now introduce the general architecture of ESNs. In this section, we mainly  follow the notations from \cite{jaeger2001echo}\cite{lukovsevivcius2012practical} to keep things consistent. ESNs are mostly used for temporal supervised learning. We will present the setup in discrete time domain, denoting each time step as $ n = 1, 2, 3, \dots, T $, which leads the input signal to be $ \mathbf{u}(n) \in \mathbb{R}^K := (u_1(n), \dots, u_K(n))$ and the teacher signal to be 
-$ \mathbf{y}(n) \in \mathbb{R}^L := (u_1(n), \dots, u_L(n))$. 
+We now introduce the general architecture of ESNs. In this section, we mainly  follow the notations from \cite{jaeger2001echo}\cite{lukovsevivcius2012practical} to keep things consistent. ESNs are mostly used for temporal supervised learning. We will present the setup in discrete time domain, denoting each time step as $ n = 1, 2, 3, \dots, T $, which leads the input signal to be $ \mathbf{u}(n) \in \mathbb{R}^K := (u_1(n), \dots, u_K(n))^T$ and the teacher signal to be 
+$ \mathbf{y}(n) \in \mathbb{R}^L := (u_1(n), \dots, u_L(n))^T$. 
 
 \begin{figure}[h]
 	\centering
@@ -288,15 +286,16 @@ These are paramount factors to consider when one analyzes EEG signals.
 	\item Spatial filtering: Spatial filtering is needed when you want to localize a result and to eliminate topological features of the data. For instance, if an experiment requires the subjects to conduct some tasks that involve multiple brain regions, it would be otherwise difficult to isolate the active regions without spatial filtering. \cite{cohen2014analyzing}
 \end{itemize}
 
-It is worth noting that there is a trend in machine learning that tries to construct end-to-end models without any preprocessing of the data nowadays. People often use a class of techniques called Deep Learning (DL). \nomenclature{\textbf{DL}}{Deep Learning} DL methods compose multiple levels of representational simple and nonlinear layer. Each layer learns at different degrees of abstraction. With enough layers, the models can learn how to discriminate important aspects of data from other variations. DL has made lots of advances in solving challenging problems. In the recent decade, DL has produced competition wining approaches in imaging recognition \cite{krizhevsky2012imagenet}\cite{farabet2013learning} and promising methods for sequence learning tasks in natural language processing \cite{bordes2014question} \cite{luong2014addressing}. However, DL methods are not suitable for EEG data processing, because DL methods usually have many free parameters and it is simply hard to collect enough EEG data for the training purpose. In robotics, although it is also difficult to obtain real world data, people can simulate the training data in a physics engine because the mechanics of robots' interactions and the real world are well understood. Unfortunately, this is not possible for EEG data yet, since we simply don't understand the brain well enough to have a simulator for the brain's underlying mechanisms.
+It is worth noting that there is a trend in machine learning that tries to construct end-to-end models without any preprocessing of the data nowadays. People often use a class of techniques called Deep Learning (DL). \nomenclature{\textbf{DL}}{Deep Learning} DL methods compose multiple levels of representational simple and nonlinear layer. Each layer learns at different degrees of abstraction. With enough layers, the models can learn how to discriminate important aspects of data from other variations. DL has made lots of advances in solving challenging problems. In the recent decade, DL has produced competition wining approaches in imaging recognition \cite{krizhevsky2012imagenet}\cite{farabet2013learning} and promising methods for sequence learning tasks in natural language processing \cite{bordes2014question} \cite{luong2014addressing}. However, DL methods are not suitable for EEG data processing, because DL methods usually have many free parameters, and it is simply hard to collect enough EEG data for the training purpose. In robotics, although it is also difficult to obtain real world data, people can simulate the training data in a physics engine because the mechanics of robots' interactions and the real world are well understood. Unfortunately, this is not possible for EEG data yet, since we simply don't understand the brain well enough to have a simulator for the brain's underlying mechanisms.
 
 
 \paragraph{Artifacts}
-Artifacts  primarily stem from numerous places in an EEG study, such as blinks, muscle movements and wire noise. Note that EEG is not an error-free measurement technique and we do not know all sources of error. Fortunately after reasonable preprocessing, most analytics tools are robust enough to the noise leftover. Independent Components Analysis (ICA) is the common choice for artifacts removal. It essentially separates the source into different independent sources. Originally, ICA was meant to solve the blind source separation problem, trying to retrieve the independent sources $ \mathbf{s} = ({s_1(t), \dots, s_N(t)})$ \cite{comon1994independent}. The sources $\mathbf{s}$ is being mixed by an unknown matrix $\mathbf{A}$, such that the recorded $N$ mixture $ \mathbf{x} = ({x_1(t), \dots, s_N(t)})$ has the property that 
+Artifacts  stem from numerous places in an EEG study, such as blinks, muscle movements and wire noise. Note that EEG is not an error-free measurement technique and we do not know all sources of error. Fortunately after reasonable preprocessing, most analytics tools are robust enough to the noise leftover. Independent Components Analysis (ICA) is the common choice for artifacts removal. It essentially separates the source into different independent sources. Originally, ICA was meant to solve the blind source separation problem, trying to retrieve the independent sources $ \mathbf{s} = ({s_1(t), \dots, s_N(t)})$ \cite{comon1994independent}. The sources $\mathbf{s}$ is being mixed by an unknown matrix $\mathbf{A}$, such that the recorded $N$ mixture $ \mathbf{x} = ({x_1(t), \dots, s_N(t)})$ has the property that 
 \begin{align}
 \mathbf{x = As}
 \end{align} 
-ICA in the context of EEG records, separates the data at different electrodes into a sum of various temporally independent components \cite{jung2000removing}, and thus muscle movement, eye blinks and oculomotor activities can generally be detected and rejected. 
+ICA in the context of EEG records, separates the data at different electrodes into a sum of various temporally independent components \cite{jung2000removing}, and thus muscle movement, eye blinks and oculomotor activities can generally be detected and rejected.  Traditionally, artifacts detection from ICA need human experts to manually remove the corrupted components but this takes lots of time and training. Most of the ICA-based removal techniques require additional recording for a subject's artifact activity. For example using two eye electrodes to record eye movements and then do a correlation analysis to remove artifactual  components later on. In this project, we are using a fully automated method  Multiple Artifact Rejection Algorithm (MARA) \cite{Winkler2011}. MARA is a supervised-learning linear approach that learns from over 1k samples labeled by experts. Without using additional recordings, we are still able to automate the artifact removal process. \nomenclature{\textbf{MARA}}{Multiple Artifact Rejection Algorithm} 
+
 
 \paragraph{Classification overview}
 There are five common types of classification algorithms in EEG analytics: linear classifiers, neural networks, nonlinear Bayesian, nearest neighbor and classifiers combinations \cite{lotte2007review}. Here we will discuss two of them and their corresponding characteristics in EEG classification.
@@ -304,7 +303,7 @@ There are five common types of classification algorithms in EEG analytics: linea
 \begin{itemize}
 	\item Linear classifiers: Linear Discriminant Analysis (LDA) \nomenclature{\textbf{LDA}}{Linear Discriminant Analysis} and SVMs are the most common linear classifiers in EEG analysis. LDA uses several hyperplanes to separate the data. It is cheap to compute and therefore a good candidate for online learning. SVMs also make use of hyperplane separation but they have a different objective, maximizing the margins between different class planes. SVMs have a few good properties, thanks to the regularization terms:  robustness for overfitting and tolerance to the curse-of-dimensionality \cite{bennett2000support}.
 	
-	\item Neural networks: Multilayer Perceptron (MLP) \nomenclature{\textbf{MLP}}{ Multilayer Perceptron} has been widely used in EEG classification \cite{anderson1996classification}\cite{palaniappan2005brain} due to its flexibility to adapt to different problems. However with noisy and non-stationary data like EEG, it is particularly prone to overfitting \cite{balakrishnan2005multilayer}, and thus it needs careful tuning and architecture design. We should pay special attention to Gaussian classifier which is specifically created to process EEG data in BCIs \cite{millan2004noninvasive} \cite{millan2000local}. In this local neural classifier, each unit in the network is a Gaussian discriminator for each class prototype and if a class has several prototypes, only the nearest one is used. During training, units are pushed towards the EEG samples of the same class and are pushed away from the ones that do not belong to the same class. It has been shown that this kind of architecture is superior to MLP in terms of the rejection efficiency for uncertain samples \cite{millan2000local}. Coming back to ESNs,  they have been used to construct a fast and reliable method for epileptic seizure detection \cite{buteneers2008real}, however, it's not clear how effective ESNs are in EEG classification when being compared with other methods due to the lack of relevant study, nevertheless ESNs should still be a good choice for such a sequence learning task and we would like to explore its limitations in this regard.
+	\item Neural networks: Multilayer Perceptron (MLP) \nomenclature{\textbf{MLP}}{ Multilayer Perceptron} has been widely used in EEG classification \cite{anderson1996classification}\cite{palaniappan2005brain} due to its flexibility to adapt to different problems. However with noisy and non-stationary data like EEG, it is particularly prone to overfitting \cite{balakrishnan2005multilayer}, and thus it needs careful tuning and architecture design. We should pay special attention to Gaussian classifier which is specifically created to process EEG data in BCIs \cite{millan2004noninvasive} \cite{millan2000local}. In this local neural classifier, each unit in the network is a Gaussian discriminator for each class prototype and if a class has several prototypes, only the nearest one is used. During training, units are pushed towards the EEG samples of the same class and are pushed away from the ones that do not belong to the same class. It has been shown that this kind of architecture is superior to MLP in terms of the rejection efficiency for uncertain samples \cite{millan2000local}. As for ESNs,  they have been used to construct a fast and reliable method for epileptic seizure detection \cite{buteneers2008real}, however, it's not clear how effective ESNs are in EEG classification when being compared with other methods due to the lack of relevant study, nevertheless ESNs should still be a good choice for such a sequence learning task and we would like to explore its limitations in this regard.
 
 \end{itemize}
 
@@ -359,34 +358,72 @@ Since we are building a binary EEG classifier, the model construction pipeline i
 	\caption{Data processing pipeline}
 \end{wrapfigure}
 
-	\paragraph{Preprocessing} As we already discussed in section 4, two of the main problems that an EEG classifier faces are the curse of dimensionality and low data-noise ratio. Therefore, cleaning and compression stages are necessary. For cleaning, we use a bandpass filter 0.5 - 79 Hz. The artifacts are not removed in this project because firstly, manual inspection of ICA component for artifacts removal requires domain expertise, and secondly, automation of artifact removals in EEG is another research question and is non-trivial on itself. Furthermore, we normalize each input channel by 
-	$$ \bar{u}_i(t) = \frac{u_i(t) - mean(u_i)}{max(u_i) - min(u_i)} i \in [1, 12] $$
-	   In addition, we remove the subjects whose EEG recordings are strongly influenced by artifacts and prior caffeine intake. Finally, we get rid of the relative MLS outliers which leaves us with 77 training samples.
+	\paragraph{Preprocessing} As we already discussed in section 4, two of the main problems that an EEG classifier faces are the curse of dimensionality and low data-noise ratio. Therefore, cleaning and compression stages are necessary. For cleaning, we use a bandpass filter 0.5 - 79 Hz, then we apply ICA, in preparation for artifacts removal.\footnote{We run the runica version ICA in EEGLAB.}. After obtaining the independent components, we all the components that are marked as artifacts by MARA. Let's look at one example of MARA in our data. 
 		
-	In the compression stage, we choose only 12 electrodes (F3 C3 P3 Pz O1 Oz O2 P4 C4 F4 Fz Cz) because  there are overlaps among electrode recordings. The exact locations of these electrodes on the scalp are shown in figure 6. Then we will down sample the frequency from 1024 Hz to 512 Hz. Recordings at extremely high frequencies do not have the relevant information about brain processes. We denote each electrode's recording by $c_i. i \in [1, 12]$. 
+		\begin{figure}[!h]
+			\begin{center}
+				\includegraphics[width=\textwidth]{img/ica}
+			\end{center}
+			\caption{Artifact markers for a sample data stream by MARA.}
+		\end{figure}
+	In figure 6, we have 12 independent components of a subject's recording. Component one and component three are marked as artifact with high probability. In the current setup, all components marked as artifacts are removed by default, but if one wants to be more careful, a threshold on probability can be used. In component one, there is a strong impulse in the frontal area which should be mainly due to eye movements, and in component three on the right hemisphere where no brain tissue exists, we also have lots of activities, and thus it is not surprising that these two components are marked as artifacts.
 	
-	Lastly, in preparation for the  cross-validation, we split all the subjects into 5 groups. During the testing phase, we will just leave out one group for testing in each iteration. In figure 7, we can see a five-second clip of the preprocssed EEG sample. The pattern of the signal is more clear and less dense as compared to the raw form shown in figure 4. All the preprocessing is done in Matlab using EEGLAB toolbox \cite{delorme2004eeglab}.
+		\begin{figure}[!h]
+			\begin{center}
+				\includegraphics[width=\textwidth]{img/art}
+			\end{center}
+			\caption{Data stream with corrupted artifacts.}
+		\end{figure}
+				\begin{figure}[!h]
+		\begin{center}
+			\includegraphics[width=\textwidth]{img/artrm}
+		\end{center}
+		\caption{Data stream with artifacts removed using ICA and MARA.}
+	\end{figure}
+	Now we look at the effect of removing these two components. In figure 7 and figure 8, we can compare the differences to have a appreciation of the power of MARA. Notably, at around 11 seconds in figure 7, there exists a clear indication of artifact because we have some sharp amplitude changes which are more severe in the frontal lobe. We know this causation, because channels Fz F3 and F3 all show significant intensity changes. This effect should be attributed to eye movement as those channels are close to the eyes. After removing the eye movement component based on MARA, and we obtain the data in figure 8, which has much more brain-like oscillations around 11 seconds.
+	
+	Furthermore, we normalize each input channel by 
+	$$ \bar{u}_i(t) = \frac{u_i(t) - mean(u_i)}{max(u_i) - min(u_i)} i \in [1, 12] $$
+	We understand this normalization approach for EEG data comparison across subjects is not optimal. This channel based method is adopted because EEG amplitude is also influenced by age, gender and race. It is hard to just normalize each channel within one single subject without jeopardizing target-related information. A more careful approach is to test the statistical difference of EEG amplitudes with respect to the three factors mentioned above and then do a parametric normalization if the differences are significant.  
+	
+	Then, we remove the subjects whose EEG recordings are strongly influenced by artifacts and prior caffeine intake. Finally, we get rid of the relative MLS outliers which leaves us with 77 training samples.
+		
+	In the compression stage, we choose only 12 electrodes (F3 C3 P3 Pz O1 Oz O2 P4 C4 F4 Fz Cz), because  there are overlaps among electrode recordings. We use the 10-20 electrode placement system in our project, which uses numbers and letters to denote the brain regions \cite{klem1999ten}. The letters stand for the general areas: F(frontal), C(central), P(parietal) and O(occipital). The odd numbers mean represent the electrodes on the left hemisphere, and the even numbers represent the ones on the right. The exact locations of these electrodes on the scalp are shown in figure 9. Then we will down sample the frequency of EEG recordings from 2048 Hz to 256 Hz. Recordings at extremely high frequencies do not have the relevant information about brain processes. We denote each electrode's recording by $c_i. i \in [1, 12]$. 
+	All the preprocessing is done in Matlab using EEGLAB toolbox \cite{delorme2004eeglab}.
+	
 	\begin{figure}[!h]
 		\begin{center}
 			\includegraphics[width=0.7\textwidth]{img/chanLocation}
 		\end{center}
 		\caption{Locations of 12 selected electrode channels.}
 	\end{figure}
-			\begin{figure}[!h]
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{img/processed}
-	\end{center}
-	\caption{Preprocessed EEG sample.}
-	\end{figure}
+
 
 \paragraph{Model Building} 
 
 \begin{itemize}
 	\item Encoding : After finished preprocessing the data, we define the relative MLS as $$ MLS = \frac{PreRMSE - PostRMSE}{PreRMSE}  $$
 	The relative MLS is the main criterion that we use to label the subjects.   
-	In figure 8, we have the age (y axis) versus relative MLS (x axis) scatter plot.  For the relative MLS, the smaller the value is, the more one's motor skills can improve after training. We have three groups of subjects: yellow dots old high performing, blue dots old low performing and purple dots young high performing. All young subjects are considered high performing and among the old subjects, we use the median to differentiate the high performing and low performing subjects.
+	In figure 8, we have the age (y axis) versus relative MLS (x axis) scatter plot.  For the relative MLS, the smaller the value is, the more one's motor skills can improve after training. We have three groups of subjects: yellow dots old high performing, blue dots old low performing and purple dots young high performing. All young subjects are considered high performing and among the old subjects, we use the median to differentiate the high performing and low performing subjects. So after the encoding, the number of subjects in different groups is shown in table 1.
 	
-	\item ESN construction:  We start by using a network of 100 reservoir units and try out unit size of 150 and 250. We also use leaky neurons to update. Then we construct the teacher signal, a vector of size two by one, one element being one and the other being zero depending on which MLS group this subject belongs to. In the predication phase, we first exploit the inputs $\mathbf{u}$ by using the updates rules defined in equation (2), and obtain $\hat{\mathbf{y}}$ of size 2 by T. The class of $\mathbf{u}$ thus becomes:
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{||c c ||} 
+			\hline
+			Group name & Subject count  \\ [0.5ex] 
+			\hline\hline
+			Young High (YH)  & 28 \\ 
+			Old Low (OL) & 23  \\
+			Old High (OH) & 24  \\ [0.5ex] 
+			\hline
+		\end{tabular}
+		\caption{Subject counts in different group after encoding.}
+	\end{table}
+\nomenclature{\textbf{YH}}{Young high performers} 
+\nomenclature{\textbf{OL}}{Old low performers} 
+\nomenclature{\textbf{OH}}{Old high performers} 
+	
+	\item ESN construction:  We use 150 internal units as the starting point. We also use leaky neurons to update. Then we construct the teacher signal, a vector of size two by one, one element being one and the other being zero depending on which MLS group this subject belongs to. In the predication phase, we first exploit the inputs $\mathbf{u}$ by using the updates rules defined in equation (2), and obtain $\hat{\mathbf{y}}$ of size 2 by T. The class of $\mathbf{u}$ thus becomes:
 	$$ class_{idx} = max_{rowidx} \frac{\sum_i^T\mathbf{y_{1i}}}{\sum_i^T\mathbf{y_{2i}}} $$
 	
 	\item Training: We use the ridge regression with regularization which is discussed in section 2.1. In our experiment we train three binary classifier in total: young high performers vs old high performers, young high performers vs old low performers and old high performers vs old low performers.
@@ -401,59 +438,113 @@ Since we are building a binary EEG classifier, the model construction pipeline i
 \paragraph{Post-processing}
 As we know, EEG classification is prone to over-fitting, so after the model's been constructed, we fine tune  washout threshold, spectral radius, regularization and the leaking rate to get better results \cite{lukovsevivcius2012practical}. These four parameters are mostly dealt with and the other parameters are disregarded in this experiment.
 
-\section{Results}
-\paragraph{Stratified five-fold cross-validation}
-In the evaluation phase, we use stratified five-fold cross-validation. Conventional cross-validation in our experiment setup wouldn't work well because we only have two classes and a small number of samples in the order of tens, and therefore in the cross-validation phase mere random allocation of the data samples to different folds might lead to a situation where one class is only present in the testing but not in the training phase which will surely leads to bad performance. A good evaluation method should have both low bias and low variance and k-fold stratified cross-validation is general better than the regular version \cite{kohavi1995study}. We only have 77 subjects and three groups but we are constructing three mutual binary classifiers among these groups, which gives fewer data points. Hence we use the stratified five-fold cross-validation scheme to evaluate the model results.
+
+\paragraph{Stratified three-fold cross-validation}
+In the evaluation phase, we use stratified three-fold cross-validation. Conventional cross-validation in our experiment setup wouldn't work well because we only have two classes and a small number of samples in the order of tens, and therefore in the cross-validation phase mere random allocation of the data samples to different folds might lead to a situation where one class is only present in the testing but not in the training phase which will surely leads to bad performance. A good evaluation method should have both low bias and low variance and k-fold stratified cross-validation is general better than the regular version \cite{kohavi1995study}. We only have 77 subjects and three groups, but we are constructing three mutual binary classifiers among these groups, which gives around 50 subjects for each model. Hence we use the stratified three-fold cross-validation scheme to evaluate the model results. The author also finds that the variations of errors between different folds and randomization differ a lot, and hence we always use the Mersenne Twister method with seed 0 \footnote{In Matlab, this can be set by `rng(`default')'.} to tackle this instability. 
 
 \paragraph{Parameter selection}
-The washout threshold stays reasonably stable when other parameters are changing so we pick the washout threshold first. The deciding factor is when we move back the threshold, the classification result doesn't fluctuate too much, and at the same time that the internal neuron responses remain relatively stable. The first value of such a point should be the washout threshold. in our experiment, we found out 550 is a good enough washout threshold.
+The washout threshold stays reasonably stable when other parameters are changing, so we pick the washout threshold first. The deciding factor is when we move back the threshold, the classification result does not fluctuate too much, and at the same time that the internal neuron responses remain relatively stable. The first value of such a point should be the washout threshold. In our experiment, we found out 550 is a good enough washout threshold.
 
-The parameter values for the young high performers vs old low performers and young high performers vs old high performers are quite similar so we just showcase the validation error behavior on the young high performers vs old low performers model. 
+The parameter values for the YH vs OL performers and YH vs OH are quite similar so we just showcase the validation error behavior on the YH vs OL model. 
 
-\begin{figure}[h]
+After washout threshold is being set, we first do a sparse parameters manual search to locate the range of the values for the later systematic tunning, then we do a grid search on the leaky rate $\alpha$ and the spectral radius $\rho$. The final step is to increase the number of internal units to improve accuracy. In this project, the number of units actually has a strong influence on the performance due to the complexity of brain data.
+
+Even with network of size 1000, we are still not overfitting yet as you can see from figure 11. On the x-axis, we having regularization term starting from 0.0000001 to 0.01. For each iteration we multiply the regularization term by 5. Neither the training or testing error benefits from more regularization. We also found out that the bias term scale does not make a difference here, so we will just use one.
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{img/pair}
-	\caption{The top is the training error and the bottom is the testing errors with respect to the leaky rate and the spectral radius for young high performers vs old low performers.}
+	\includegraphics[width=0.7\textwidth]{img/reg}
+	\caption{Training and testing error with respect to regularization term}
 \end{figure}
-After washout threshold is being set, we first do a sparse parameters manual search to locate the range of the values to do a systematic tunning, then we do a grid search on two of the parameters. In this case we do a grid search with respect to the leaky rate $\alpha$ and the spectral radius $\rho$.  In figure 9, the training error declines when either $\alpha$ or $rho$ declines, whereas the testing error has a local minimum when $\alpha = 0.0003$ and $ \rho = 1$ with a training error at 0.0627 and testing error at 0.1776. 
 
-Now we can fix the $\alpha$ and $\rho$ to do a single for loop on regularization coefficient:  
-\begin{figure}[h]
+\section{Results}
+\subsection{Network dynamics}
+In figure 12, we have two sample network outputs for both the right and wrong classifications. The simulated class signals are the network outputs and the true class signals are the ground truths. Clearly, for the correctly classified output on the left, the range for the network output span wider between 0 and 1, however for the wrongly classified output, the range for the network output is more narrow and the two simulated class signals swap the leading position more frequently.
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{img/regu}
-	\caption{Error behavior when $\alpha = 0.0003$ and $ \rho = 1$ with respect to regularization coefficient.}
+	\includegraphics[width=1.05\textwidth]{img/simulation}
+	\caption{The left chart is a sample network output that has been correctly classified, and the right chart is a sample network output that has been wrongly classified}
 \end{figure}
-So the training keeps increasing when regularization coefficient climbs up and the minimum of testing error hits when the coefficient is between 0.0005 and 0.00075. The testing error is around 0.1331 and the min training error across this range is 0.0964. The classifier of young high performers vs old high performers can also achieve 0.1331 using similar set of parameters.
 
-The author could not find a set of good parameters to make the old high performers vs old low performers classifier do better than random chance, and thus the error plots of that model is not included. 
+We then take a look at the interval units dynamics. In figure 15, we can observe all inputs vary between -0.5 and 0.5, and it is hard to find a correlation between the inputs and interval units just by eyes. As for the internal units dynamics in figure 16, different units have different ranges and show different frequencies as well, for instance, unit 42 seems to change faster than unit 34. The amplitudes of the internals units are still narrow, not making use of the full range between -1 and 1 either.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.85\textwidth]{img/rightIns2}
+	\caption{Sample input dynamics for a correctly classified example.}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.85\textwidth]{img/rightIns}
+	\caption{Sample network dynamics for a correctly classified example.}
+\end{figure}
 
+\subsection{Model performance}
 
+The parameters used are $\rho = 0.4 \text{ and } \alpha = 0.1 $ for OH vs YH on a network whose internal units is of size 1500, and the parameters for the OL vs YH model is quite similar just changing $\rho$ to 0.1. However, for the OH vs OL, the author could not find a good enough parameter to make the testing error better than random chance. Regularization is set to zero for all models. 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{||c c c||} 
-	\hline
-	Model Name & Training error & Testing error \\ [0.5ex] 
-	\hline\hline
-	Old high performers vs young high performers & 0.1205 & 0.1331 \\ 
-	\hline
-	Old low performers vs young high performers & 0.0964 & 0.1331 \\ 
-	\hline
-	Old low performers vs old high performers & 0.1965 & worse than random chance \\ [1ex] 
-	\hline
-\end{tabular}
-\caption{Table for training and testing errors. The third model's training error was the taken from the best trial across all tested parameters regardless the testing error.}
+		\hline
+		Model type & Training Error & Testing Error \\ [0.5ex] 
+		\hline\hline
+		model a: OH vs YH & 0.0947 & 0.2070 \\ 
+		model b: OL vs YH & 0.0659 & 0.2092  \\
+		model c: OH vs OL & 0.1667 & random chance  \\ [0.5ex] 
+		\hline
+	\end{tabular}
+\caption{Training and testing errors for different models.}
 \end{table}
 
-\todo{add confusion matrix for both models}
+From table 2, one can see model a and model b achieve similar performances, albeit model c is hopeless. 
+
+Confusion matrix is constructed by summing up for target and output labels across our stratified three-fold classification. Let us look at the matrix for model a first, there exists a systematic preference towards YH as $37.5\%$ for OH are misclassified sa YH. The accuracy for OH ($88.2\%$) and the recall for YH ($93.1\%$) are reasonably good, however the accuracy for YH ($75.0\%$ )and recall for OH ($62.5\%$) are worse off.
+The confusion matrix for model b follows a similar pattern, there exists a systematic bias from OL to YH, given that not a single YH has been misclassified as OL but about $20.8\%$ of OL being misclassified as YH. Both accuracy for OL and the recall for YH are perfect but the accuracy for YH ($72.5\%$) and recall( $54.2\%$) for OL are less satisfying.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{img/confusion}
+	\caption{Confusion Matrix for model a and b. For model a, class 1 is YH, and class 2 is OH. For model b, class 1 is YH, and class 2 is OL. The green texts are marginal correctness percentages and the red ones are the error rates.}
+\end{figure}
+As for model c, no strong bias is observed in the misclassified samples.
+
+Interestingly, If we use model b to test on the OH group, model b will predict that all subjects in OH belong to YH. If we use model a to test on OL group, model a will categorize all subjects in OL into OH.
 
 
 \section{Discussion}
+\paragraph{Engineering analysis}
+As usual, we first talk about the engineering side and then go to the neurological side.  Model a and b, which classify between young and old subjects, perform reasonably well, meaning, being able to separate between the YH vs OL and YH vs LH, which human experts are not able to do. So ESNs can indeed pick up some spatiotemporal features that EEG contains.
+ 
+ Now let us look at pitfalls and possible extensions. There exists an obvious gap between the training and testing error. Regularization term does not help with the performance much when the network has 1000 internal units based on figure 11, in which neither the training or the testing error improves with respect to the regularization coefficient. This could imply that the network is still underfitting. This is not too surprising, when one considers the amount of data we have. Each time series has 15k timesteps after down-sampling, and we have 12 channels for each series. For each model, there are approximately 50 subjects to work with, and we using three-fold cross-validation which means around 30 subjects are used for training, which leads to 15k * 12 * 30 = 5.4M number of data points for training.
 
+When we look at the network output in figure 12, the network decision is quite uncertain when dealing with complex data like EEG. Although for the rightly classified data, we can see the amplitude of the output is greater, and leading position of the two competing class signals switches less frequently when being compared with the one that is wrongly classified.  
 
-\section{Conclusion}
+From both figure 13 and figure 14, we notice that inputs are not ``well normalized'' in a sense that the inputs are not making use of the full range between -1 and 1. We already discuss this issue in section 2.2 and possible extensions by using parametric normalization in order not to lose target-related information. As a consequence of the current implementation, the network will surely find it easier to classify the ones with strongly amplitudes, hence for the ones that have small amplitudes, the internal units are not making use of the full range between -1 and 1 either. Therefore, a more complicated normalization routine should be able to ameliorate the classification performance.
+
+Finally, we have come to discuss to the bias encountered in the confusion matrix in model a and b. Particularly in model b, all the misclassified subjects actually belong to OL, and YH can be perfectly separated. One possible explanation might be, the uneven distribution of training data, given we have 28 YHs and only 23 OLs. So the networks will by default bias towards YH.
+
+\paragraph{Neuroscience analysis}
+The hypothesis of the neuroscience question is, there exists two groups in OH where one subgroup's brains are more like those of YH, whereas the other subgroup's brains are more like those of OL, and there are some compensation effects happening that enable the second group to still perform well. 
+
+Based on the classification results, we can say that something is different between the young and old groups that enables model a and model b to perform well. The difference between OH and OL is hard to tell, since model c cannot perform better than random chance. 
+
+Another observation is, if we use model b to do a test on OH, the network will classify all the subjects to YH, which is to say that the network thinks the brain activity of the OH subjects are more similar to the ones of YH as compared to OL. On the other hand, model a (trained on YH and OH) classifies all OL to be OH, which indicates that indeed OH are similar to YH, and little or no compensation effects exist. \todo{will discuss this with Godde before submission}
+
+\section{Conclusion and future work}
+Previously ESNs have been shown useful for epileptic seizure detection. This project is yet another successful application of using ESNs on EEG data. We also observe evidence that disproves the existence  compensation effects motor learning skills in the older subjects.
+
+Furthermore, this guided research is also an attempt for correlation analysis in the realm of end-to-end machine learning techniques. Machine learning techniques are powerful, and they will become even more so, if we understand what is going on behind the scene, in addition to merely focusing on the model performance without much understanding. 
+
+Possible future works include constructing the gradient target value for MLS instead of using binary classification. Currently there is no evidence for the existence of compensating effects. This might be due to the the old subjects are too similar to each other, so the compensating effects are harder to detect. By using gradient target value or extreme values (very good performers in OH and really bad performers in OL), compensation, if really exists might, play a bigger role with respect to MLS. 
+
+One could also further develop general statistical frameworks of how to construct different classifiers and by analyzing their decision boundary for hypothesis testing and explore their mathematical nature.
+
+\section{Acknowledgments}
+I first want to thank Professor Herbert Jaeger, who gave me all the necessary guidance and who always pulled me back from dark corners of echo state networks. It simply has been incredible to work with him. I also want to thank Professor Benjamin Godde for his generosity in giving me the EEG data to with on and also for his patience in answering all my physiological queries.
+
 
 \clearpage
 \newpage
+
+
 
 \bibliographystyle{unsrt}
 \bibliography{thesis}

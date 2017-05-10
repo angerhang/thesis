@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2016.1.22)  2 MAY 2017 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2016.1.22)  11 MAY 2017 01:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,7 +678,7 @@ LaTeX Info: Redefining \nameref on input line 43.
 \openout5 = `thesis.out'.
 
  ABD: EveryShipout initializing macros
-<bsc-logo.pdf, id=43, 233.87375pt x 84.315pt>
+<bsc-logo.pdf, id=55, 233.87375pt x 84.315pt>
 File: bsc-logo.pdf Graphic file (type pdf)
  <use bsc-logo.pdf>
 Package pdftex.def Info: bsc-logo.pdf used on input line 49.
@@ -700,7 +700,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/Users/Hang/.texlive2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./bsc-
 logo.pdf>]
-[2] [3] (./thesis.toc
+[2]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 127.
+ [3] (./thesis.toc
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 )
@@ -711,98 +714,147 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 177.
  [2
 
 ]
-<img/esnG.png, id=118, 640.3925pt x 391.4625pt>
+<img/esnG.png, id=135, 640.3925pt x 391.4625pt>
 File: img/esnG.png Graphic file (type png)
  <use img/esnG.png>
-Package pdftex.def Info: img/esnG.png used on input line 185.
+Package pdftex.def Info: img/esnG.png used on input line 183.
 (pdftex.def)             Requested size: 341.43437pt x 208.71655pt.
  [3 <./img/esnG.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 223.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 221.
 
  (/opt/local/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
  [4]
-[5] <img/waves.png, id=177, 411.5375pt x 424.58624pt>
+[5] <img/waves.png, id=194, 411.5375pt x 424.58624pt>
 File: img/waves.png Graphic file (type png)
  <use img/waves.png>
-Package pdftex.def Info: img/waves.png used on input line 263.
+Package pdftex.def Info: img/waves.png used on input line 261.
 (pdftex.def)             Requested size: 213.39568pt x 220.16417pt.
 
-<img/noise.png, id=180, 244.915pt x 180.675pt>
+<img/noise.png, id=197, 244.915pt x 180.675pt>
 File: img/noise.png Graphic file (type png)
  <use img/noise.png>
-Package pdftex.def Info: img/noise.png used on input line 276.
+Package pdftex.def Info: img/noise.png used on input line 274.
 (pdftex.def)             Requested size: 213.39568pt x 157.42581pt.
- [6 <./img/waves.png>] [7 <./img/noise.png>] [8]
-<img/visu.jpg, id=242, 803.0pt x 501.875pt>
+ [6 <./img/waves.png>] [7 <./img/noise.png>] [8] [9]
+<img/visu.jpg, id=272, 803.0pt x 501.875pt>
 File: img/visu.jpg Graphic file (type jpg)
  <use img/visu.jpg>
-Package pdftex.def Info: img/visu.jpg used on input line 338.
+Package pdftex.def Info: img/visu.jpg used on input line 337.
 (pdftex.def)             Requested size: 426.79135pt x 266.75061pt.
- [9] [10 <./img/visu.jpg>] <img/dataflow.jpg, id=262, 312.16624pt x 401.5pt>
+ [10 <./img/visu.jpg>] <img/dataflow.jpg, id=281, 312.16624pt x 401.5pt>
 File: img/dataflow.jpg Graphic file (type jpg)
-
-<use img/dataflow.jpg>
-Package pdftex.def Info: img/dataflow.jpg used on input line 357.
+ <use img/dataflow.jpg>
+Package pdftex.def Info: img/dataflow.jpg used on input line 356.
 (pdftex.def)             Requested size: 170.71393pt x 219.56976pt.
 
-Overfull \hbox (1.61926pt too wide) in paragraph at lines 362--363
+Overfull \hbox (1.61926pt too wide) in paragraph at lines 361--362
 [] []\OT1/phv/b/n/10.95 Preprocessing[] \OT1/phv/m/n/10.95 As we al-ready dis-c
 ussed
  []
 
-<img/chanLocation.jpg, id=264, 562.1pt x 421.575pt>
+<img/ica.png, id=283, 1166.3575pt x 689.57625pt>
+File: img/ica.png Graphic file (type png)
+ <use img/ica.png>
+Package pdftex.def Info: img/ica.png used on input line 365.
+(pdftex.def)             Requested size: 426.79135pt x 252.32982pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/art.png, id=284, 1101.11375pt x 558.085pt>
+File: img/art.png Graphic file (type png)
+ <use img/art.png>
+Package pdftex.def Info: img/art.png used on input line 373.
+(pdftex.def)             Requested size: 426.79135pt x 216.3153pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/artrm.png, id=285, 998.73125pt x 508.90125pt>
+File: img/artrm.png Graphic file (type png)
+ <use img/artrm.png>
+Package pdftex.def Info: img/artrm.png used on input line 379.
+(pdftex.def)             Requested size: 426.79135pt x 217.47212pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <./img/dataflow.jpg>] [12 <./img/ica.png> <./img/art.png>]
+<img/chanLocation.jpg, id=303, 562.1pt x 421.575pt>
 File: img/chanLocation.jpg Graphic file (type jpg)
  <use img/chanLocation.jpg>
-Package pdftex.def Info: img/chanLocation.jpg used on input line 371.
+Package pdftex.def Info: img/chanLocation.jpg used on input line 396.
 (pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
 
-<img/processed.png, id=265, 747.29187pt x 374.90062pt>
-File: img/processed.png Graphic file (type png)
- <use img/processed.png>
-Package pdftex.def Info: img/processed.png used on input line 377.
-(pdftex.def)             Requested size: 384.1096pt x 192.70128pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./img/dataflow.jpg>] [12 <./img/chanLocation.jpg> <./img/processed.png>]
-<img/scatter.png, id=281, 560.0925pt x 484.81125pt>
+[13 <./img/artrm.png>] <img/scatter.png, id=313, 560.0925pt x 484.81125pt>
 File: img/scatter.png Graphic file (type png)
- <use img/scatter.png>
-Package pdftex.def Info: img/scatter.png used on input line 397.
+
+<use img/scatter.png>
+Package pdftex.def Info: img/scatter.png used on input line 434.
 (pdftex.def)             Requested size: 256.07741pt x 221.66951pt.
 
-[13 <./img/scatter.png>] <img/pair.jpg, id=293, 609.27625pt x 670.505pt>
-File: img/pair.jpg Graphic file (type jpg)
 
-<use img/pair.jpg>
-Package pdftex.def Info: img/pair.jpg used on input line 415.
-(pdftex.def)             Requested size: 298.75264pt x 328.78564pt.
- <img/regu.jpg, id=294, 562.1pt x 421.575pt>
-File: img/regu.jpg Graphic file (type jpg)
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<use img/regu.jpg>
-Package pdftex.def Info: img/regu.jpg used on input line 423.
-(pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
- [14 <./img/pair.jpg>]
-Overfull \hbox (32.3474pt too wide) in paragraph at lines 433--444
+[14 <./img/chanLocation.jpg>] [15 <./img/scatter.png>]
+<img/reg.jpg, id=336, 589.20125pt x 407.5225pt>
+File: img/reg.jpg Graphic file (type jpg)
+ <use img/reg.jpg>
+Package pdftex.def Info: img/reg.jpg used on input line 455.
+(pdftex.def)             Requested size: 298.75264pt x 206.63359pt.
+
+<img/simulation.png, id=337, 968.61874pt x 388.45125pt>
+File: img/simulation.png Graphic file (type png)
+
+<use img/simulation.png>
+Package pdftex.def Info: img/simulation.png used on input line 465.
+(pdftex.def)             Requested size: 448.13222pt x 179.72108pt.
+
+Overfull \hbox (21.34087pt too wide) in paragraph at lines 465--466
  [][] 
  []
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 447.
-[15 <./img/regu.jpg>] (./thesis.bbl
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/rightIns2.jpg, id=338, 485.815pt x 377.41pt>
+File: img/rightIns2.jpg Graphic file (type jpg)
+ <use img/rightIns2.jpg>
+Package pdftex.def Info: img/rightIns2.jpg used on input line 472.
+(pdftex.def)             Requested size: 362.77525pt x 281.82442pt.
+
+<img/rightIns.jpg, id=339, 489.83pt x 387.4475pt>
+File: img/rightIns.jpg Graphic file (type jpg)
+ <use img/rightIns.jpg>
+Package pdftex.def Info: img/rightIns.jpg used on input line 477.
+(pdftex.def)             Requested size: 362.77525pt x 286.95496pt.
+
+[16 <./img/reg.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./img/simulation.png> <./img/rightIns2.jpg>]
+<img/confusion.png, id=352, 897.3525pt x 510.90875pt>
+File: img/confusion.png Graphic file (type png)
+ <use img/confusion.png>
+Package pdftex.def Info: img/confusion.png used on input line 504.
+(pdftex.def)             Requested size: 426.79135pt x 242.9882pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18 <./img/rightIns.jpg>] [19 <./img/confusion.png>] [20] [21] (./thesis.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 8.
 Missing character: There is no √ in font phvr7t!
@@ -813,33 +865,36 @@ Missing character: There is no ú in font phvr7t!
 Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
 Missing character: There is no ù in font phvr7t!
- [16
+
+Underfull \hbox (badness 3861) in paragraph at lines 94--97
+[]\OT1/phv/m/n/10.95 Herbert Jaeger.  \OT1/phv/m/sl/10.95 Short term mem-ory in
+ echo state net-works\OT1/phv/m/n/10.95 .  GMD-
+ []
+
+[22
 
 ]
-Missing character: There is no ‚ in font phvr7t!
-Missing character: There is no Ä in font phvr7t!
-Missing character: There is no ô in font phvr7t!
 Missing character: There is no ‚ in font phvro7t!
 Missing character: There is no Ä in font phvro7t!
 Missing character: There is no ô in font phvro7t!
- [17]) [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
+ [23] [24]) [25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8D761F5CC1D6F7B64FECCA900928C614;495.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 461.
+(rerunfilecheck)             Checksum: AF3D51AFE6E12599FBB57B95B41EBA7D;695.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 552.
  ) 
 Here is how much of TeX's memory you used:
- 17347 strings out of 494185
- 320946 string characters out of 6156888
- 386052 words of memory out of 5000000
- 20191 multiletter control sequences out of 15000+600000
+ 17417 strings out of 494185
+ 322055 string characters out of 6156888
+ 389411 words of memory out of 5000000
+ 20232 multiletter control sequences out of 15000+600000
  34225 words of font info for 77 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 62i,10n,76p,1561b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,76p,1553b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/local/share/texm
 f-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/local/share/texmf-texl
@@ -854,10 +909,10 @@ cmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/
 local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/local/share
 /texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (22 pages, 620038 bytes).
+Output written on thesis.pdf (29 pages, 1723184 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 115 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
