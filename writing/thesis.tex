@@ -15,7 +15,35 @@
 \usepackage[pdftex]{hyperref}	%% many PDF options can be set here
 \usepackage{todonotes}
 \usepackage{nomencl}
+\usepackage{listings}
 \usepackage{amssymb}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
 \usepackage{amsmath}
 \usepackage{wrapfig}
 \makenomenclature
@@ -514,7 +542,7 @@ When we look at the network output in Figure 13, the network decision is quite u
 
 From both Figure 14 and Figure 15, we notice the effects of inputs not being ``well normalized'' in a sense that the inputs are not making use of the full range between -1 and 1. We already discuss this issue in section 2.2 and possible extensions by using parametric normalization in order not to lose target-related information. As a consequence of the current implementation, the network will surely find it easier to classify the ones with strong amplitudes, hence for the ones that have small amplitudes, the internal units are not making use of the full range between -1 and 1 either. Therefore, a more complicated normalization routine is needed to hopefully ameliorate the classification performance.
 
-Finally, we have come to discuss the bias encountered in the confusion matrix in model a and b. Particularly in model b, all the misclassified subjects actually belong to OL, and YH can be perfectly separated. One possible explanation might be the uneven distribution of training data, given we have 28 YHs and only 23 OLs. Although our model c (trained between OH and OL) fails, based on the above facts, we are still able to discriminate OH and OL by using model a alone. The decision procedure can be as simple as: 
+Finally, we have come to discuss the bias encountered in the confusion matrix in model a and b. Particularly in model b, all the misclassified subjects actually belong to OL, and YH can be perfectly separated. One possible explanation might be the uneven distribution of training data, given we have 28 YHs and only 23 OLs. 
 
 
 \paragraph{Neuroscience analysis}
@@ -522,19 +550,36 @@ The hypothesis of the neuroscience question is that there exists two groups in O
 
 Based on the classification results, we can say that something is different between the young and old groups that enables model a and model b to perform well. The difference between OH and OL is hard to tell, since model c cannot perform better than random chance. 
 
-Another observation is, if we use model b to do a test on OH, the network will classify all the subjects to YH, which is to say that the network thinks the brain activity of the OH subjects are more similar to the ones of YH as compared to OL. On the other hand, model a (trained on YH and OH) classifies all OL to be OH, which indicates that indeed OH are similar to YH, and little or no compensation effects exist. \todo{will discuss this with Godde before submission}
+Another observation is, if we use model b to do a test on OH, the network will classify all the subjects to YH, which is to say that the network thinks the brain activity of the OH subjects are more similar to the ones of YH as compared to OL. On the other hand, model a (trained on YH and OH) classifies all OL to be OH, which indicates that indeed OH are similar to YH. Although our model c (trained between OH and OL) fails, based on the above facts, we are still able to discriminate OH and OL by using model b alone. The decision procedure can be as simple as: 
+
+\begin{lstlisting}[language = Matlab, caption = Classification function between OH and OL]
+subject1 = loadSubject();
+if (modelB.predict(subject1) == YH)
+	subject1.class = OH;
+else 
+	subject1.class = OL;
+end
+\end{lstlisting}
+
+In summary, we know the high performers' brains in young and old subjects work different in order to enable model a to work. Also among the old subjects, high and lower performers' brains also work different in order to enable listing 1 to discriminate between OH and OL.
 
 \section{Conclusion and future work}
-Previously ESNs have been shown to be useful for epileptic seizure detection. This project is yet another successful application of using ESNs on EEG data. We also observe evidence that disproves the existence  compensation effects motor learning skills in the older subjects.
+Previously ESNs have been shown to be useful for epileptic seizure detection. This project is yet another successful application of using ESNs on EEG data. We also observe evidence that proves the existence of different neurological groups for MLS.
 
 Furthermore, this guided research is also an attempt for correlation analysis in the realm of end-to-end machine learning techniques. Machine learning techniques are powerful, and they will become even more so, if we understand what is going on behind the scene, in addition to merely focusing on the model performance without much understanding. 
 
-Possible future works include constructing the gradient target value for MLS instead of using binary classification. Currently there is no evidence for the existence of compensating effects. This might be due to the the old subjects are too similar to each other, so the compensating effects are harder to detect. By using gradient target value or extreme values (very good performers in OH and really bad performers in OL), compensation, if really exists might, play a bigger role with respect to MLS. 
+Possible future works include constructing the gradient target value for MLS instead of using binary classification to have more conclusive results. Also importantly, one can apply the notch filter and proper normalization scheme to see how much more accurate the classifiers can get. This extension should in theory help to develop a working classifier between OL and OH, since we already have an indirect routine to differentiate these two groups as shown in Listing 1. 
 
-One could also further develop general statistical frameworks of how to construct different classifiers and by analyzing their decision boundary for hypothesis testing and explore their mathematical nature.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/futureVisu}
+	\caption{A mini example for classified input signals in model b. Red means class 1 and blue means class 2.  }
+\end{figure}
+One could also further develop general statistical frameworks of how to construct different classifiers and by analyzing their decision boundary for hypothesis testing and explore their mathematical nature. Perhaps something more feasible that can be done is to develop ML assisted techniques for scientific discovery in particular neuroscience. We have shown that there are differences among OH, OL, and YH, but the exact difference is unknown. One nice thing about ESNs is that we can visualize and internal dynamics a lot easier than ML methods which have parameters of on the order of millions. We can visualize input channels, reservoir dynamics with the help of decision vector as shown in Figure 17. The colors are given based on the decision vector of the network, then the human experts can directly observe what kind of activities that the networks consider as class one or class two to help with their investigation. They will probably obtain more insights by averaging the EEG data, to find out the most common pattern being classified to a particular class. In this ML-assisted fashion, the myths of black-modeling should start to unfold.
+
 
 \section{Acknowledgments}
-I first want to thank Professor Herbert Jaeger, who gave me all the necessary guidance and who always pulled me back from dark corners of echo state networks. It simply has been incredible to work with him. I also want to thank Professor Benjamin Godde for his generosity in giving me the EEG data to with on and also for his patience in answering all my physiological queries.
+I first want to thank Professor Herbert Jaeger, who gave me all the necessary guidance and who always pulled me back from dark corners of echo state networks. It simply has been incredible to work with him. I also want to thank Professor Benjamin Godde for his generosity in giving me the EEG data to work with on and also for his patience in answering all my physiological questions. Lastly, I want to thank my friend Marvin Fey for his assiduous proofreading and support along the way. 
 
 
 \clearpage
