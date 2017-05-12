@@ -24,15 +24,15 @@
 		\nompageref{iii}
   \item [{\textbf{MSE}}]\begingroup Mean Square Error\nomeqref {2}
 		\nompageref{4}
-  \item [{\textbf{OH}}]\begingroup Old high performers\nomeqref {10}
+  \item [{\textbf{OH}}]\begingroup Old High Performers\nomeqref {10}
 		\nompageref{14}
-  \item [{\textbf{OL}}]\begingroup Old low performers\nomeqref {10}
+  \item [{\textbf{OL}}]\begingroup Old Low Performers\nomeqref {10}
 		\nompageref{14}
   \item [{\textbf{RNNs}}]\begingroup Recurrent Neural Networks\nomeqref {0}
 		\nompageref{iii}
   \item [{\textbf{SVMs}}]\begingroup Support Vector Machines\nomeqref {0}
 		\nompageref{2}
-  \item [{\textbf{YH}}]\begingroup Young high performers\nomeqref {10}
+  \item [{\textbf{YH}}]\begingroup Young High Performers\nomeqref {10}
 		\nompageref{14}
 
 \end{thenomenclature}

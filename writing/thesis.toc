@@ -1,28 +1,28 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \contentsline {section}{\numberline {2}Theoretical Frameworks}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Echo State Networks (ESNs)}{3}{subsection.2.1}
-\contentsline {paragraph}{Propagation steps}{3}{section*.6}
-\contentsline {paragraph}{Training steps}{4}{section*.7}
-\contentsline {paragraph}{Prediction steps}{4}{section*.8}
-\contentsline {paragraph}{Networks parameters}{4}{section*.9}
+\contentsline {paragraph}{Propagation steps}{3}{section*.4}
+\contentsline {paragraph}{Training steps}{4}{section*.5}
+\contentsline {paragraph}{Prediction steps}{4}{section*.6}
+\contentsline {paragraph}{Networks parameters}{4}{section*.7}
 \contentsline {subsection}{\numberline {2.2}Resting State Electroencephalogram (EEG)}{5}{subsection.2.2}
-\contentsline {paragraph}{Properties of EEG features for analytics}{6}{section*.10}
-\contentsline {paragraph}{Preprocessing}{7}{section*.11}
-\contentsline {paragraph}{Artifacts}{8}{section*.12}
-\contentsline {paragraph}{Classification overview}{8}{section*.13}
+\contentsline {paragraph}{Properties of EEG features for analytics}{6}{section*.8}
+\contentsline {paragraph}{Preprocessing}{6}{section*.9}
+\contentsline {paragraph}{Artifacts}{7}{section*.10}
+\contentsline {paragraph}{Classification overview}{8}{section*.11}
 \contentsline {section}{\numberline {3}Motivation}{9}{section.3}
-\contentsline {section}{\numberline {4}Experiments}{10}{section.4}
-\contentsline {paragraph}{Data source}{10}{section*.14}
-\contentsline {paragraph}{Preprocessing}{11}{section*.15}
-\contentsline {paragraph}{Model Building}{13}{section*.16}
-\contentsline {paragraph}{Post-processing}{14}{section*.17}
-\contentsline {paragraph}{Stratified three-fold cross-validation}{15}{section*.18}
-\contentsline {paragraph}{Parameter selection}{15}{section*.19}
-\contentsline {section}{\numberline {5}Results}{16}{section.5}
-\contentsline {subsection}{\numberline {5.1}Network dynamics}{16}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Model performance}{17}{subsection.5.2}
-\contentsline {section}{\numberline {6}Discussion}{19}{section.6}
-\contentsline {paragraph}{Engineering analysis}{19}{section*.20}
-\contentsline {paragraph}{Neuroscience analysis}{20}{section*.21}
-\contentsline {section}{\numberline {7}Conclusion and future work}{20}{section.7}
-\contentsline {section}{\numberline {8}Acknowledgments}{21}{section.8}
+\contentsline {section}{\numberline {4}Experiments}{9}{section.4}
+\contentsline {paragraph}{Data source}{9}{section*.12}
+\contentsline {paragraph}{Preprocessing}{11}{section*.13}
+\contentsline {paragraph}{Model Building}{14}{section*.14}
+\contentsline {paragraph}{Post-processing}{16}{section*.15}
+\contentsline {paragraph}{Stratified three-fold cross-validation}{16}{section*.16}
+\contentsline {paragraph}{Parameter selection}{17}{section*.17}
+\contentsline {section}{\numberline {5}Results}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Network dynamics}{17}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Model performance}{18}{subsection.5.2}
+\contentsline {section}{\numberline {6}Discussion}{20}{section.6}
+\contentsline {paragraph}{Engineering analysis}{20}{section*.18}
+\contentsline {paragraph}{Neuroscience analysis}{21}{section*.19}
+\contentsline {section}{\numberline {7}Conclusion and future work}{22}{section.7}
+\contentsline {section}{\numberline {8}Acknowledgments}{22}{section.8}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2016.1.22)  11 MAY 2017 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2016.1.22)  12 MAY 2017 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,10 +700,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/Users/Hang/.texlive2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./bsc-
 logo.pdf>]
-[2]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 127.
- [3] (./thesis.toc
+[2] [3] (./thesis.toc
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 )
@@ -714,147 +711,166 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 177.
- [2
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 172.
 
-]
-<img/esnG.png, id=135, 640.3925pt x 391.4625pt>
+Overfull \hbox (22.3132pt too wide) in paragraph at lines 173--175
+\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10
+.95 n\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; [] ; u[]\OT1/cmr/m/n/10.95 (\OML
+/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 ))[]$ \OT1/phv/m/n/10.95 and the teacher si
+g-nal to be $[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 ) \O
+MS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 R[] \OT1/cmr/m/n/10.95 := (\OML/cmm/m/it/1
+0.95 y[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 )\OML/cmm/m
+/it/10.95 ; [] ; y[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95
+ ))[]$\OT1/phv/m/n/10.95 .
+ []
+
+[2
+
+] <img/esnG.png, id=133, 640.3925pt x 391.4625pt>
 File: img/esnG.png Graphic file (type png)
  <use img/esnG.png>
-Package pdftex.def Info: img/esnG.png used on input line 183.
+Package pdftex.def Info: img/esnG.png used on input line 178.
 (pdftex.def)             Requested size: 341.43437pt x 208.71655pt.
- [3 <./img/esnG.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 221.
+
+Overfull \hbox (13.8883pt too wide) in paragraph at lines 185--186
+ []\OT1/phv/b/n/10.95 Propagation steps[] \OT1/phv/m/n/10.95 At each time step,
+ the in-ter-nal units are up-dated us-ing leaky-integrated
+ []
+
+[3 <./img/esnG.png>]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 212.
 
  (/opt/local/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
- [4]
-[5] <img/waves.png, id=194, 411.5375pt x 424.58624pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
+ [4] [5] <img/waves.png, id=189, 411.5375pt x 424.58624pt>
 File: img/waves.png Graphic file (type png)
- <use img/waves.png>
-Package pdftex.def Info: img/waves.png used on input line 261.
-(pdftex.def)             Requested size: 213.39568pt x 220.16417pt.
 
-<img/noise.png, id=197, 244.915pt x 180.675pt>
+<use img/waves.png>
+Package pdftex.def Info: img/waves.png used on input line 247.
+(pdftex.def)             Requested size: 213.39568pt x 220.16417pt.
+ <img/noise.png, id=192, 244.915pt x 180.675pt>
 File: img/noise.png Graphic file (type png)
- <use img/noise.png>
-Package pdftex.def Info: img/noise.png used on input line 274.
+
+<use img/noise.png>
+Package pdftex.def Info: img/noise.png used on input line 260.
 (pdftex.def)             Requested size: 213.39568pt x 157.42581pt.
- [6 <./img/waves.png>] [7 <./img/noise.png>] [8] [9]
-<img/visu.jpg, id=272, 803.0pt x 501.875pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./img/waves.png>] [7 <./img/noise.png>] [8]
+<img/subject.png, id=256, 594.22pt x 580.1675pt>
+File: img/subject.png Graphic file (type png)
+ <use img/subject.png>
+Package pdftex.def Info: img/subject.png used on input line 323.
+(pdftex.def)             Requested size: 341.43437pt x 333.37239pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9] <img/visu.jpg, id=271, 803.0pt x 501.875pt>
 File: img/visu.jpg Graphic file (type jpg)
  <use img/visu.jpg>
-Package pdftex.def Info: img/visu.jpg used on input line 337.
+Package pdftex.def Info: img/visu.jpg used on input line 332.
 (pdftex.def)             Requested size: 426.79135pt x 266.75061pt.
- [10 <./img/visu.jpg>] <img/dataflow.jpg, id=281, 312.16624pt x 401.5pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <./img/subject.png>] <img/dataflow.jpg, id=281, 312.16624pt x 401.5pt>
 File: img/dataflow.jpg Graphic file (type jpg)
- <use img/dataflow.jpg>
-Package pdftex.def Info: img/dataflow.jpg used on input line 356.
+
+<use img/dataflow.jpg>
+Package pdftex.def Info: img/dataflow.jpg used on input line 350.
 (pdftex.def)             Requested size: 170.71393pt x 219.56976pt.
 
-Overfull \hbox (1.61926pt too wide) in paragraph at lines 361--362
-[] []\OT1/phv/b/n/10.95 Preprocessing[] \OT1/phv/m/n/10.95 As we al-ready dis-c
-ussed
- []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <img/ica.png, id=283, 1166.3575pt x 689.57625pt>
 File: img/ica.png Graphic file (type png)
  <use img/ica.png>
-Package pdftex.def Info: img/ica.png used on input line 365.
+Package pdftex.def Info: img/ica.png used on input line 358.
 (pdftex.def)             Requested size: 426.79135pt x 252.32982pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/art.png, id=284, 1101.11375pt x 558.085pt>
+ [11 <./img/visu.jpg>] [12 <./img/dataflow.jpg> <./img/ica.png>]
+<img/art.png, id=298, 1101.11375pt x 558.085pt>
 File: img/art.png Graphic file (type png)
  <use img/art.png>
-Package pdftex.def Info: img/art.png used on input line 373.
+Package pdftex.def Info: img/art.png used on input line 367.
 (pdftex.def)             Requested size: 426.79135pt x 216.3153pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/artrm.png, id=285, 998.73125pt x 508.90125pt>
+<img/artrm.png, id=299, 998.73125pt x 508.90125pt>
 File: img/artrm.png Graphic file (type png)
  <use img/artrm.png>
-Package pdftex.def Info: img/artrm.png used on input line 379.
+Package pdftex.def Info: img/artrm.png used on input line 373.
 (pdftex.def)             Requested size: 426.79135pt x 217.47212pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./img/dataflow.jpg>] [12 <./img/ica.png> <./img/art.png>]
-<img/chanLocation.jpg, id=303, 562.1pt x 421.575pt>
+ [13 <./img/art.png> <./img/artrm.png>]
+<img/chanLocation.jpg, id=310, 562.1pt x 421.575pt>
 File: img/chanLocation.jpg Graphic file (type jpg)
  <use img/chanLocation.jpg>
-Package pdftex.def Info: img/chanLocation.jpg used on input line 396.
+Package pdftex.def Info: img/chanLocation.jpg used on input line 390.
 (pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./img/artrm.png>] <img/scatter.png, id=313, 560.0925pt x 484.81125pt>
+[14] [15 <./img/chanLocation.jpg>]
+<img/scatter.png, id=328, 560.0925pt x 484.81125pt>
 File: img/scatter.png Graphic file (type png)
-
-<use img/scatter.png>
-Package pdftex.def Info: img/scatter.png used on input line 434.
+ <use img/scatter.png>
+Package pdftex.def Info: img/scatter.png used on input line 429.
 (pdftex.def)             Requested size: 256.07741pt x 221.66951pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14 <./img/chanLocation.jpg>] [15 <./img/scatter.png>]
-<img/reg.jpg, id=336, 589.20125pt x 407.5225pt>
+[16 <./img/scatter.png>] <img/reg.jpg, id=342, 589.20125pt x 407.5225pt>
 File: img/reg.jpg Graphic file (type jpg)
- <use img/reg.jpg>
-Package pdftex.def Info: img/reg.jpg used on input line 455.
-(pdftex.def)             Requested size: 298.75264pt x 206.63359pt.
 
-<img/simulation.png, id=337, 968.61874pt x 388.45125pt>
+<use img/reg.jpg>
+Package pdftex.def Info: img/reg.jpg used on input line 450.
+(pdftex.def)             Requested size: 298.75264pt x 206.63359pt.
+ [17 <./img/reg.jpg>]
+<img/simulation.png, id=349, 968.61874pt x 388.45125pt>
 File: img/simulation.png Graphic file (type png)
 
 <use img/simulation.png>
-Package pdftex.def Info: img/simulation.png used on input line 465.
+Package pdftex.def Info: img/simulation.png used on input line 460.
 (pdftex.def)             Requested size: 448.13222pt x 179.72108pt.
 
-Overfull \hbox (21.34087pt too wide) in paragraph at lines 465--466
+Overfull \hbox (21.34087pt too wide) in paragraph at lines 460--461
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/rightIns2.jpg, id=338, 485.815pt x 377.41pt>
+<img/rightIns2.jpg, id=350, 485.815pt x 377.41pt>
 File: img/rightIns2.jpg Graphic file (type jpg)
  <use img/rightIns2.jpg>
-Package pdftex.def Info: img/rightIns2.jpg used on input line 472.
+Package pdftex.def Info: img/rightIns2.jpg used on input line 467.
 (pdftex.def)             Requested size: 362.77525pt x 281.82442pt.
 
-<img/rightIns.jpg, id=339, 489.83pt x 387.4475pt>
+<img/rightIns.jpg, id=351, 489.83pt x 387.4475pt>
 File: img/rightIns.jpg Graphic file (type jpg)
  <use img/rightIns.jpg>
-Package pdftex.def Info: img/rightIns.jpg used on input line 477.
+Package pdftex.def Info: img/rightIns.jpg used on input line 472.
 (pdftex.def)             Requested size: 362.77525pt x 286.95496pt.
 
-[16 <./img/reg.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./img/simulation.png> <./img/rightIns2.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <img/confusion.png, id=352, 897.3525pt x 510.90875pt>
 File: img/confusion.png Graphic file (type png)
  <use img/confusion.png>
-Package pdftex.def Info: img/confusion.png used on input line 504.
+Package pdftex.def Info: img/confusion.png used on input line 499.
 (pdftex.def)             Requested size: 426.79135pt x 242.9882pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18 <./img/rightIns.jpg>] [19 <./img/confusion.png>] [20] [21] (./thesis.bbl
+[18 <./img/simulation.png>] [19 <./img/rightIns2.jpg> <./img/rightIns.jpg>]
+[20 <./img/confusion.png>]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 525.
+ [21] [22] (./thesis.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 8.
 Missing character: There is no √ in font phvr7t!
@@ -866,35 +882,35 @@ Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
 Missing character: There is no ù in font phvr7t!
 
-Underfull \hbox (badness 3861) in paragraph at lines 94--97
+Underfull \hbox (badness 3861) in paragraph at lines 89--92
 []\OT1/phv/m/n/10.95 Herbert Jaeger.  \OT1/phv/m/sl/10.95 Short term mem-ory in
  echo state net-works\OT1/phv/m/n/10.95 .  GMD-
  []
 
-[22
+[23
 
 ]
 Missing character: There is no ‚ in font phvro7t!
 Missing character: There is no Ä in font phvro7t!
 Missing character: There is no ô in font phvro7t!
- [23] [24]) [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
+ [24] [25]) [26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 548.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 548.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 548.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 548.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: AF3D51AFE6E12599FBB57B95B41EBA7D;695.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 552.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 548.
  ) 
 Here is how much of TeX's memory you used:
- 17417 strings out of 494185
- 322055 string characters out of 6156888
- 389411 words of memory out of 5000000
- 20232 multiletter control sequences out of 15000+600000
- 34225 words of font info for 77 fonts, out of 8000000 for 9000
+ 17402 strings out of 494185
+ 321723 string characters out of 6156888
+ 387124 words of memory out of 5000000
+ 20216 multiletter control sequences out of 15000+600000
+ 33153 words of font info for 75 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 62i,10n,76p,1553b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,76p,1580b,710s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/local/share/texm
 f-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/local/share/texmf-texl
@@ -905,14 +921,15 @@ public/amsfonts/cm/cmmi8.pfb></opt/local/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/
 local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/local/share
 /texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (29 pages, 1723184 bytes).
+Output written on thesis.pdf (30 pages, 2010870 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
+ 484 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
  139 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

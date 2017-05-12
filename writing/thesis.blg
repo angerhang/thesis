@@ -3,52 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: thesis.bib
-I was expecting a `,' or a `}'---line 290 of file thesis.bib
- :  
- :  school = "Ghent University"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--empty school in davidverstraeten2009
 Warning--can't use both volume and number fields in kohavi1995study
 You've used 44 entries,
             1791 wiz_defined-function locations,
-            711 strings with 12478 characters,
-and the built_in function-call counts, 11812 in all, are:
-= -- 1098
+            708 strings with 12607 characters,
+and the built_in function-call counts, 11754 in all, are:
+= -- 1091
 > -- 511
 < -- 14
 + -- 189
 - -- 145
-* -- 827
-:= -- 1802
+* -- 813
+:= -- 1793
 add.period$ -- 143
 call.type$ -- 44
 change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 534
-empty$ -- 1128
+cite$ -- 45
+duplicate$ -- 530
+empty$ -- 1126
 format.name$ -- 145
-if$ -- 2677
+if$ -- 2669
 int.to.chr$ -- 0
 int.to.str$ -- 44
-missing$ -- 46
+missing$ -- 45
 newline$ -- 223
 num.names$ -- 44
-pop$ -- 129
+pop$ -- 133
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 264
 stack$ -- 0
-substring$ -- 881
+substring$ -- 868
 swap$ -- 162
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 122
+warning$ -- 1
+while$ -- 120
 width$ -- 46
 write$ -- 491
-(There was 1 error message)
+(There was 1 warning)

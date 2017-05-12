@@ -78,17 +78,12 @@ Mantas Luko{\v{s}}evi{\v{c}}ius.
 \bibitem{davidverstraeten2009}
 David Verstraeten.
 \newblock {\em Reservoir Computing: computation with dynamical systems}.
-\newblock PhD thesis, 2009.
+\newblock PhD thesis, Ghent University, 2009.
 
 \bibitem{maass2007computational}
 Wolfgang Maass, Prashant Joshi, and Eduardo~D Sontag.
 \newblock Computational aspects of feedback in neural circuits.
 \newblock {\em PLoS Comput Biol}, 3(1):e165, 2007.
-
-\bibitem{Kahan1965}
-W.~Kahan.
-\newblock Further remarks on reducing truncation errors.
-\newblock {\em Commun. ACM}, 8(1):40--, January 1965.
 
 \bibitem{jaeger2001short}
 Herbert Jaeger.
@@ -244,6 +239,13 @@ John Kounios, Jessica~I Fleck, Deborah~L Green, Lisa Payne, Jennifer~L
 Jennifer Wu, Ramesh Srinivasan, Arshdeep Kaur, and Steven~C Cramer.
 \newblock Resting-state cortical connectivity predicts motor skill acquisition.
 \newblock {\em NeuroImage}, 91:84--90, 2014.
+
+\bibitem{subject2016}
+Claudia Voelcker-Rehage Lena~Hubner, Ben~Godde.
+\newblock Effects of a bout of acute exercise on motor learning and eeg
+  frequency band power in older adults.
+\newblock poster at Society for Neuroscience Annual Meeting, San Diego, USA,
+  November 2016.
 
 \bibitem{jasper1958ten}
 Herbert~H Jasper.
