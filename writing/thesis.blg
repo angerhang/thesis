@@ -6,7 +6,7 @@ Database file #1: thesis.bib
 Warning--can't use both volume and number fields in kohavi1995study
 You've used 44 entries,
             1791 wiz_defined-function locations,
-            708 strings with 12607 characters,
+            708 strings with 12611 characters,
 and the built_in function-call counts, 11754 in all, are:
 = -- 1091
 > -- 511
