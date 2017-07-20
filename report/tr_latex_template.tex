@@ -1,0 +1,136 @@
+%&glplain
+\documentclass[12pt,a4paper]{article}
+%\usepackage{apalike}
+%\usepackage[rflt]{floatflt}
+\usepackage{hyperref}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue
+\fi
+
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf, .jpg}
+\else
+\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+
+\setlength{\textwidth}{14.66cm} % height of main text
+\setlength{\textheight}{22.2cm}    % width of text
+
+\begin{document}
+
+%: Title -----------------------------------------------
+\thispagestyle{empty}
+{\vspace*{-2.8cm} \hspace*{7.5cm} \includegraphics[width=75mm,viewport=0 0 235 85,clip]{Jacobs_LOGO_4C.pdf}}
+\vspace{6.5cm}
+
+% Author
+{\noindent \large \textsf{Michael Smith}} \\
+\\
+
+% Title
+{\noindent \LARGE \bf \textsf{Main title}} \\
+\vfill
+
+% Report number
+{\noindent \LARGE \textsf{Technical Report No. 8}} \\
+% Month and year (e.g. May 2007)
+{\noindent \textsf{May 2007}} \\
+{\hspace*{-3.17cm} \rule[3mm]{\textwidth}{0.75pt}} \\
+{\LARGE \textsf{School of Engineering and Science}} \\
+% ----------------------------------------------------
+
+
+
+\newpage
+\thispagestyle{empty}
+
+{ 
+\noindent
+\huge {\bf Main Title} \\
+\\
+\Large{sub title}\\
+\normalsize
+
+\vspace{1cm}
+
+\noindent
+{\bf Michael Smith}\\
+\\
+{\it 
+School of Engineering and Science\\
+Jacobs University Bremen gGmbH\\
+Campus Ring 12\\
+28759 Bremen\\
+Germany\\ 
+\\
+E-Mail: \href{mailto:m.smith@jacobs-university.de}{m.smith@jacobs-university.de}\\
+\url{http://www.jacobs-university.de/} 
+} \\
+
+
+}
+
+
+
+\section*{Summary}
+\ldots
+
+
+%: Table of Contents
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+
+
+%: Sections
+\newpage
+\setcounter{page}{1}
+
+\section{Introduction}
+
+\section{Methods}
+
+\section{Results}
+
+\section{Discussion}
+
+
+
+%: References
+%\bibliographystyle{apalike}
+%\bibliography{}
+
+
+
+
+%: Information about the author
+\noindent
+%\begin{floatingfigure}[l]{1.1in}
+%\includegraphics{photo.pdf} 
+%\end{floatingfigure}
+\noindent {\bf Michael Smith} studied A at B\ldots
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
