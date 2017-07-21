@@ -12,7 +12,7 @@
 
 5. To avoid unclear math formulation for Echo State Property (ESP), I remove the math formulation of ESP as a whole. Only interpretation in plain english is given. Indeed, I guess it is no need to abuse the notations to define what Echo State Property rigoriously means in math in this application-driven ESN paper. 
 
-6. In "Size of the reservoi" bullet point, remove the "memory capacity" discussion. Only the "practical guide" is provided (choose the size as big as you can afford, but no bigger than 1+ N_u +N_x), consistent with [1]
+6. In "Size of the reservoir" bullet point, remove the "memory capacity" discussion. Only the "practical guide" is provided (choose the size as big as you can afford, but no bigger than 1+ N_u +N_x), consistent with [1]
 
 7. Change the title "Post-processing" to "Model Optimzation"
 
