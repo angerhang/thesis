@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  21 JUL 2017 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_8) (preloaded format=pdflatex 2016.1.22)  23 JUL 2017 19:14
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **eeg_report.tex
 (./eeg_report.tex
 LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Babel <3.9l> and hyphenation patterns for 44 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
+(/opt/local/share/texmf-texlive/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,14 +23,14 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
@@ -72,29 +71,29 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/opt/local/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count87
 \Hy@pagecounter=\count88
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count89
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -106,7 +105,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count90
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+(/opt/local/share/texmf-texlive/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -131,36 +130,36 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count95
 \c@bookmark@seq@number=\count96
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen107
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen108
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count97
@@ -201,44 +200,44 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/helvet.sty
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/parskip/parskip.sty
+(/opt/local/share/texmf-texlive/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(/opt/local/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/opt/local/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count109
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+(/opt/local/share/texmf-texlive/tex/latex/listings/listings.sty
 \lst@mode=\count110
 \lst@gtempboxa=\box28
 \lst@token=\toks20
@@ -252,18 +251,18 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \lst@lineno=\count115
 \lst@maxwidth=\dimen121
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+(/opt/local/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box29
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+(/opt/local/share/texmf-texlive/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/opt/local/share/texmf-texlive/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen122
 \nom@tempdim=\dimen123
@@ -292,17 +291,16 @@ LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 61.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
+ (/opt/local/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 \AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring OFF on input line 61.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count118
@@ -316,7 +314,7 @@ LaTeX Info: Redefining \nameref on input line 61.
 \openout4 = `eeg_report.out'.
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/opt/local/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
 \scratchdimen=\dimen124
@@ -329,17 +327,17 @@ LaTeX Info: Redefining \nameref on input line 61.
 \MPnumerator=\count123
 \makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks22
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/opt/local/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -353,12 +351,6 @@ Package pdftex.def Info: Jacobs_LOGO_4C.pdf used on input line 65.
 
 Overfull \hbox (12.21782pt too wide) in paragraph at lines 65--67
 []|  []
- []
-
-
-Overfull \hbox (7.80139pt too wide) in paragraph at lines 69--71
-\OT1/phv/m/n/14.4 Hang Yuan, Clau-dia Voelcker-Rehage, Lena H[]ubner, Her-bert 
-J[]ager,
  []
 
 
@@ -385,78 +377,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--83
 
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Jacob
-s_LOGO_4C.pdf>]
+{/Users/Hang/.texlive2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Jaco
+bs_LOGO_4C.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 91.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
-
+Overfull \hbox (3.02528pt too wide) in paragraph at lines 90--92
+\OT1/phv/b/n/24.88 Resting State EEG Clas-si-fi-ca-tion for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 98.
 Missing character: There is no ¸ in font phvb7t!
-Missing character: There is no ‰ in font phvb7t!
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 101.
-LaTeX Font Info:    Try loading font information for U+msa on input line 109.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 100.
+LaTeX Font Info:    Try loading font information for U+msa on input line 108.
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+LaTeX Font Info:    Try loading font information for U+msb on input line 108.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 98--111
+Underfull \hbox (badness 10000) in paragraph at lines 97--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--111
+Underfull \hbox (badness 10000) in paragraph at lines 97--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--111
+Underfull \hbox (badness 10000) in paragraph at lines 97--110
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 117.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 116.
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--130
+Underfull \hbox (badness 10000) in paragraph at lines 117--122
 
  []
 
-[2] (./eeg_report.toc)
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
+
+ []
+
+[2] [3] (./eeg_report.toc)
 \tf@toc=\write5
 \openout5 = `eeg_report.toc'.
 
- [3]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) 
-has been already used, duplicate ignored
+ [4] (./eeg_report.nls) [5
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.175 
-       [1]
+l.183 
+       [1
+
+]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 182.
- <img/esn_archi.png, id=114, 335.2525pt x 180.675pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 190.
+ <img/esn_archi.png, id=123, 335.2525pt x 180.675pt>
 File: img/esn_archi.png Graphic file (type png)
 
 <use img/esn_archi.png>
-Package pdftex.def Info: img/esn_archi.png used on input line 188.
+Package pdftex.def Info: img/esn_archi.png used on input line 196.
 (pdftex.def)             Requested size: 333.69527pt x 179.83644pt.
 
 
@@ -466,139 +461,156 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 \end{align}
+l.208 \end{align}
                   [2]pdfTeX warning (ext4): destination with the same identifie
 r (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 
+l.220 
        [3 <./img/esn_archi.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 223.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 231.
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsphv.fd
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
- [4]
-Overfull \hbox (2.13339pt too wide) in paragraph at lines 251--252
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 231.
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258 \subsection
+                 {Resting State Electroencephalogram (EEG)} [4]
+Overfull \hbox (2.13339pt too wide) in paragraph at lines 259--260
 \OT1/phv/m/n/12 EEG mea-sures the elec-tri-cal ac-tiv-i-ties from the scalp sur
 -face which are recorded
  []
 
-<img/waves.png, id=164, 411.5375pt x 424.58624pt>
+<img/waves.png, id=173, 411.5375pt x 424.58624pt>
 File: img/waves.png Graphic file (type png)
  <use img/waves.png>
-Package pdftex.def Info: img/waves.png used on input line 264.
+Package pdftex.def Info: img/waves.png used on input line 272.
 (pdftex.def)             Requested size: 208.55875pt x 215.16911pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] <img/noise.png, id=177, 244.915pt x 180.675pt>
+<img/noise.png, id=176, 244.915pt x 180.675pt>
 File: img/noise.png Graphic file (type png)
  <use img/noise.png>
-Package pdftex.def Info: img/noise.png used on input line 277.
+Package pdftex.def Info: img/noise.png used on input line 285.
 (pdftex.def)             Requested size: 208.55875pt x 153.85841pt.
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.287 	\end{figure}
+                    [5]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <./img/waves.png>] [7 <./img/noise.png>] [8] [9]
-<img/subject.png, id=248, 594.22pt x 580.1675pt>
+<img/subject.png, id=253, 594.22pt x 580.1675pt>
 File: img/subject.png Graphic file (type png)
  <use img/subject.png>
-Package pdftex.def Info: img/subject.png used on input line 341.
+Package pdftex.def Info: img/subject.png used on input line 351.
 (pdftex.def)             Requested size: 333.69527pt x 325.81224pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/visu.jpg, id=251, 803.0pt x 501.875pt>
+<img/visu.jpg, id=256, 803.0pt x 501.875pt>
 File: img/visu.jpg Graphic file (type jpg)
  <use img/visu.jpg>
-Package pdftex.def Info: img/visu.jpg used on input line 350.
+Package pdftex.def Info: img/visu.jpg used on input line 360.
 (pdftex.def)             Requested size: 417.1175pt x 260.7008pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] [11 <./img/subject.png>]
-<img/dataflow.jpg, id=268, 312.16624pt x 401.5pt>
+[10] <img/dataflow.jpg, id=267, 312.16624pt x 401.5pt>
 File: img/dataflow.jpg Graphic file (type jpg)
  <use img/dataflow.jpg>
-Package pdftex.def Info: img/dataflow.jpg used on input line 368.
+Package pdftex.def Info: img/dataflow.jpg used on input line 375.
 (pdftex.def)             Requested size: 166.84444pt x 214.59514pt.
 
-[12 <./img/visu.jpg> <./img/dataflow.jpg>]
-<img/ica.png, id=276, 1166.3575pt x 689.57625pt>
+[11 <./img/subject.png>] [12 <./img/visu.jpg> <./img/dataflow.jpg>]
+<img/ica.png, id=284, 1166.3575pt x 689.57625pt>
 File: img/ica.png Graphic file (type png)
  <use img/ica.png>
-Package pdftex.def Info: img/ica.png used on input line 376.
+Package pdftex.def Info: img/ica.png used on input line 383.
 (pdftex.def)             Requested size: 417.1175pt x 246.6058pt.
- [13 <./img/ica.png>] <img/art.png, id=285, 1101.11375pt x 558.085pt>
+
+<img/art.png, id=285, 1101.11375pt x 558.085pt>
 File: img/art.png Graphic file (type png)
  <use img/art.png>
-Package pdftex.def Info: img/art.png used on input line 385.
+Package pdftex.def Info: img/art.png used on input line 392.
 (pdftex.def)             Requested size: 417.1175pt x 211.41028pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <img/artrm.png, id=286, 998.73125pt x 508.90125pt>
 File: img/artrm.png Graphic file (type png)
  <use img/artrm.png>
-Package pdftex.def Info: img/artrm.png used on input line 391.
+Package pdftex.def Info: img/artrm.png used on input line 398.
 (pdftex.def)             Requested size: 417.1175pt x 212.54123pt.
- [14 <./img/art.png> <./img/artrm.png>]
-<img/chanLocation.jpg, id=297, 562.1pt x 421.575pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./img/ica.png>] [14 <./img/art.png> <./img/artrm.png>]
+<img/chanLocation.jpg, id=305, 562.1pt x 421.575pt>
 File: img/chanLocation.jpg Graphic file (type jpg)
  <use img/chanLocation.jpg>
-Package pdftex.def Info: img/chanLocation.jpg used on input line 408.
+Package pdftex.def Info: img/chanLocation.jpg used on input line 415.
 (pdftex.def)             Requested size: 291.98096pt x 218.98224pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [15] [16 <./img/chanLocation.jpg>]
-<img/scatter.png, id=314, 560.0925pt x 484.81125pt>
+<img/scatter.png, id=321, 560.0925pt x 484.81125pt>
 File: img/scatter.png Graphic file (type png)
  <use img/scatter.png>
-Package pdftex.def Info: img/scatter.png used on input line 447.
+Package pdftex.def Info: img/scatter.png used on input line 454.
 (pdftex.def)             Requested size: 250.27304pt x 216.63913pt.
 
-[17 <./img/scatter.png>] <img/reg.jpg, id=325, 589.20125pt x 407.5225pt>
+[17 <./img/scatter.png>] <img/reg.jpg, id=334, 589.20125pt x 407.5225pt>
 File: img/reg.jpg Graphic file (type jpg)
 
 <use img/reg.jpg>
-Package pdftex.def Info: img/reg.jpg used on input line 468.
+Package pdftex.def Info: img/reg.jpg used on input line 475.
 (pdftex.def)             Requested size: 291.98096pt x 201.95122pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18] <img/simulation.png, id=335, 968.61874pt x 388.45125pt>
+[18] <img/simulation.png, id=342, 968.61874pt x 388.45125pt>
 File: img/simulation.png Graphic file (type png)
 
 <use img/simulation.png>
-Package pdftex.def Info: img/simulation.png used on input line 478.
+Package pdftex.def Info: img/simulation.png used on input line 485.
 (pdftex.def)             Requested size: 437.97464pt x 175.64311pt.
 
-Overfull \hbox (20.85715pt too wide) in paragraph at lines 478--479
+Overfull \hbox (20.85715pt too wide) in paragraph at lines 485--486
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/rightIns2.jpg, id=336, 485.815pt x 377.41pt>
+<img/rightIns2.jpg, id=343, 485.815pt x 377.41pt>
 File: img/rightIns2.jpg Graphic file (type jpg)
  <use img/rightIns2.jpg>
-Package pdftex.def Info: img/rightIns2.jpg used on input line 485.
+Package pdftex.def Info: img/rightIns2.jpg used on input line 492.
 (pdftex.def)             Requested size: 354.55241pt x 275.4379pt.
 
-<img/rightIns.jpg, id=337, 489.83pt x 387.4475pt>
+<img/rightIns.jpg, id=344, 489.83pt x 387.4475pt>
 File: img/rightIns.jpg Graphic file (type jpg)
  <use img/rightIns.jpg>
-Package pdftex.def Info: img/rightIns.jpg used on input line 490.
+Package pdftex.def Info: img/rightIns.jpg used on input line 497.
 (pdftex.def)             Requested size: 354.55241pt x 280.4518pt.
 
 
@@ -608,24 +620,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19 <./img/reg.jpg>] [20 <./img/simulation.png> <./img/rightIns2.jpg>]
-<img/confusion.png, id=350, 897.3525pt x 510.90875pt>
+<img/confusion.png, id=358, 897.3525pt x 510.90875pt>
 File: img/confusion.png Graphic file (type png)
  <use img/confusion.png>
-Package pdftex.def Info: img/confusion.png used on input line 517.
+Package pdftex.def Info: img/confusion.png used on input line 524.
 (pdftex.def)             Requested size: 417.1175pt x 237.48436pt.
 
 [21 <./img/rightIns.jpg>] [22 <./img/confusion.png>] [23]
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+(/opt/local/share/texmf-texlive/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 543.
+nput line 550.
 
-<img/futureVisu.png, id=370, 732.7375pt x 569.12625pt>
+<img/futureVisu.png, id=377, 732.7375pt x 569.12625pt>
 File: img/futureVisu.png Graphic file (type png)
 
 <use img/futureVisu.png>
-Package pdftex.def Info: img/futureVisu.png used on input line 563.
+Package pdftex.def Info: img/futureVisu.png used on input line 570.
 (pdftex.def)             Requested size: 333.69527pt x 259.18732pt.
 
 
@@ -643,7 +655,7 @@ Missing character: There is no ù in font phvr7t!
  [26
 
 ]
-Underfull \hbox (badness 2608) in paragraph at lines 99--104
+Underfull \hbox (badness 2608) in paragraph at lines 94--99
 []\OT1/phv/m/n/12 Benjamin Schrauwen, Jeroen De-four, David Ver-straeten, and J
 an
  []
@@ -653,45 +665,44 @@ Missing character: There is no ‚ in font phvro7t!
 Missing character: There is no Ä in font phvro7t!
 Missing character: There is no ô in font phvro7t!
  [28])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 583.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
  [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 583.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 590.
  (./eeg_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 583.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 583.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 590.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 590.
 Package rerunfilecheck Info: File `eeg_report.out' has not changed.
 (rerunfilecheck)             Checksum: 25AA89286A389790226AEBACA22FD582;644.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 583.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 590.
  ) 
 Here is how much of TeX's memory you used:
- 8227 strings out of 493089
- 117581 string characters out of 6134841
- 228851 words of memory out of 5000000
- 11445 multiletter control sequences out of 15000+600000
- 35590 words of font info for 75 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 8229 strings out of 494185
+ 117202 string characters out of 6156888
+ 227267 words of memory out of 5000000
+ 11276 multiletter control sequences out of 15000+600000
+ 34436 words of font info for 74 fonts, out of 8000000 for 9000
+ 430 hyphenation exceptions out of 8191
  29i,10n,42p,1584b,1492s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on eeg_report.pdf (32 pages, 2042331 bytes).
+{/opt/local/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmitt10.pfb></opt/local/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></opt/local/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></opt/local/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+></opt/local/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/loca
+l/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/local/share/tex
+mf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on eeg_report.pdf (34 pages, 2042620 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 405 compressed objects within 5 object streams
+ 497 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
  142 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

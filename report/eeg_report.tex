@@ -66,7 +66,7 @@
 \vspace{6.5cm}
 
 % Author
-{\noindent \large \textsf{Hang Yuan, Claudia Voelcker-Rehage, Lena H\"ubner, Herbert J\"ager, Benjamin Godde }} \\
+{\noindent \large \textsf{Hang Yuan, Claudia Voelcker-Rehage, Lena H\"ubner, Benjamin Godde }} \\
 \\
 
 % Title
@@ -88,15 +88,14 @@
 
 { 
 \noindent
-\huge {\bf Main Title} \\
-\\
-\Large{sub title}\\
+\huge {\bf Resting State EEG Classification for Motor Learning Skills Using Echo State Networks} \\
+
 \normalsize
 
 \vspace{1cm}
 
 \noindent
-{\bf Hang Yuan, Claudia Voelcker-Rehage, Lena Hübner, Herbert Jäger, and Benjamin Godde  }\\
+{\bf Hang Yuan, Claudia Voelcker-Rehage, Lena Hübner, Benjamin Godde  }\\
 \\
 {\it 
 School of Engineering and Science\\
@@ -136,6 +135,15 @@ In this project, we successfully applied
 \newpage
 \thispagestyle{empty}
 \tableofcontents
+\clearpage
+
+%% Glassory 
+
+\renewcommand{\nomname}{Abbreviations}
+\printnomenclature[0.5in]
+\clearpage
+
+%% 
 
 
 %: Sections
@@ -162,7 +170,7 @@ RNNs are a kind of neural networks whose units form directed cycles. The input i
 and the corresponding labels for each time step is of the form $(y^1, y^2, \dots, y^T)$, where T is the number of time steps we have. 
 
 It is empirically difficult to train RNNs mainly due to vanishing gradient and exploding gradient \cite{bengio1994learning}. Standard methods like backpropagation through time and real time recurrent learning suffer from the vanishing gradients since they both use the error gradient
-taken from the objective function, and the gradient values become very small already after several steps. Among others, there are two approaches to avoid the exploding and vanishing gradients problem in RNN architectures: (i) In the Deep Learning\nomenclature{\textbf{DL}}{Deep Learning}  approach, exemplified by LSTMs \cite{Hochreiter1997lstm}, the problem is alleviated by utilizing additional structures of ``memory cell'' and gating mechanism, and (ii) in the Reservoir Computing approach, exemplified by ESNs, the problem is avoided by not learning the recurrent and input weights. In this report, we use the ESNs as our RNN architecture. We deter the discussion why ESNs are in favored for the EEG classification tasks to later sections.
+taken from the objective function, and the gradient values become very small already after several steps. Among others, there are two approaches to avoid the exploding and vanishing gradients problem in RNN architectures: (i) In Deep Learning\nomenclature{\textbf{DL}}{Deep Learning} (DL), exemplified by LSTMs \cite{Hochreiter1997lstm}, the problem is alleviated by utilizing additional structures of ``memory cell'' and gating mechanism, and (ii) In the Reservoir Computing approach, exemplified by ESNs, the problem is avoided by not learning the recurrent and input weights. In this report, we use the ESNs as our RNN architecture. We deter the discussion why ESNs are in favored for the EEG classification tasks to later sections.
 
 
 
@@ -204,7 +212,7 @@ where $\mathbf{x(n + 1)} \in \mathbb{R}^{N_x}$ is reservoir neuron activations, 
 \end{align}
 
 
-\paragraph{Training steps} We start with some state $\mathbf{x}(0)$ and then use equation (1) and (2) to simulate the output signal until $T_{max}$. We then discard the simulation results until $n_{min}$ when, the network dynamics become stable. From this point on, we assume time 0 is the first time step after $n_{min}$. The Error function $E$ usually measures the Root Mean Square Error (RMSE) \nomenclature{\textbf{RMSE}}{Root Mean Square Error} defined as:
+\paragraph{Training steps} We start with some state $\mathbf{x}(0)$ and then use equation (1) and (2) to simulate the output signal until $T_{max}$. We then discard the simulation results until $n_{min}$ when, the network dynamics become stable. From this point on, we assume time 0 is the first time step after $n_{min}$. The Error function $E$ usually measures the Root Mean Square Error (RMSE) defined as:
 \begin{align}
 E(\mathbf{y, y^{target}}) = \frac{1}{N_y} \sum^{N_y}_{i=1} \sqrt{\frac{1}{T} \sum^{T}_{n=1}(y_i(n) - y_i^{target}(n) )^2}
 \end{align} 
@@ -265,19 +273,21 @@ Figure 2 shows some examples of how brain waves of different frequency bands loo
 	\caption[Caption for LOF]{Brain waves visualization based on different frequency bands.\footnotemark}
 %	\caption{}
 \end{figure}
-\footnotetext{Figure taken from the site: http://www.brainworksneurotherapy.com/what-are-brainwaves}
+
 EEG is a good technique to study the brain for a few reasons: This method records the brain dynamics at the time when the cognitive events happen; Secondly, EEG directly measures the brain activity. Changes in voltage potentials are due to neurological behavior at the neuron population level; Lastly, EEG contains rich information and is multidimensional. It not only has the spatiotemporal information, but also frequency, power and phase as features that give us ample knowledge about the internal brain activities. \cite{cohen2011s}
 
 \paragraph{Properties of EEG features for analytics} 
 These are paramount factors to consider when one analyzes EEG signals.
+\footnotetext{Figure taken from the site: http://www.brainworksneurotherapy.com/what-are-brainwaves}
 \begin{itemize}
-	\item Noise and signal: EEG signals are noisy, and the noises are often hard to discriminate. One will have to find the fine line between removing too much useful information and having noisy data depending on the given task. Figure 3 is a good demonstration of the signal and noise relationship.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\textwidth]{img/noise.png}
 		\caption{This plot shows the interconnected relationship between signal and noise in EEG (taken from \cite{cohen2014analyzing}). The x-axis is the degree of data cleaning that we conduct and the y-axis is the leftover for signal and noise after the cleaning. We can see the distribution of signal and noise with respect to the level of preprocessing. Area left to a implies there is little noise left, area between a and b has a mixture of both noise and signal and the area right to c has mostly noise.}
 	\end{figure}
-	\item Non-stationarity: EEG signals can change quickly over time.
+
+	\item Noise and signal: EEG signals are noisy, and the noises are often hard to discriminate. One will have to find the fine line between removing too much useful information and having noisy data depending on the given task. Figure 3 is a good demonstration of the signal and noise relationship.
+	\item Non-stationarity: EEG signals from the same subject can change as gel on the recording electrodes dry up, the subject has a different mental state or even the dislocation of the electrodes in a different trials/sessions.
 	\item Small training sets: Due to the costs of collecting data from subjects, the training sets are oftentimes 
 	smaller than ideal.
 \end{itemize}
@@ -289,7 +299,7 @@ These are paramount factors to consider when one analyzes EEG signals.
 	\item Spatial filtering: Spatial filtering is needed when you want to localize a result and to eliminate topological features of the data. For instance, if an experiment requires the subjects to conduct some tasks that involve multiple brain regions, it would be otherwise difficult to isolate the active regions without spatial filtering. \cite{cohen2014analyzing}
 \end{itemize}
 
-It is worth noting that there is a trend in Machine Learning (ML)  \nomenclature{\textbf{ML}}{Machine Learning} that tries to construct end-to-end models without any preprocessing of the data nowadays. People often use a class of techniques called Deep Learning (DL). DL methods compose multiple levels of representational simple and nonlinear layer. Each layer learns at different degrees of abstraction. With enough layers, the models can learn how to discriminate important aspects of data from other variations. DL has made lots of advances in solving challenging problems. In the recent decade, DL has produced competition winning approaches in imaging recognition \cite{krizhevsky2012imagenet}\cite{farabet2013learning} and promising methods for sequence learning tasks in natural language processing \cite{bordes2014question} \cite{luong2014addressing}. However, DL methods are not suitable for EEG data processing, because DL methods usually have many free parameters, and it is simply hard to collect enough EEG data for the training purpose. In robotics, although it is also difficult to obtain real world data, people can simulate the training data in a physics engine because the mechanics of robots' interactions and the real world are well understood. Unfortunately, this is not possible for EEG data yet, since we simply do not understand the brain well enough to have a simulator for the brain's underlying mechanisms.
+It is worth noting that there is a trend in Machine Learning (ML)  \nomenclature{\textbf{ML}}{Machine Learning} that tries to construct end-to-end models without any preprocessing of the data nowadays. People often use a class of techniques called DL. DL methods compose multiple levels of representational simple and nonlinear layer. Each layer learns at different degrees of abstraction. With enough layers, the models can learn how to discriminate important aspects of data from other variations. DL has made lots of advances in solving challenging problems. In the recent decade, DL has produced competition winning approaches in imaging recognition \cite{krizhevsky2012imagenet}\cite{farabet2013learning} and promising methods for sequence learning tasks in natural language processing \cite{bordes2014question} \cite{luong2014addressing}. However, DL methods are not suitable for EEG data processing, because DL methods usually have many free parameters, and it is simply hard to collect enough EEG data for the training purpose. In robotics, although it is also difficult to obtain real world data, people can simulate the training data in a physics engine because the mechanics of robots' interactions and the real world are well understood. Unfortunately, this is not possible for EEG data yet, since we simply do not understand the brain well enough to have a simulator for the brain's underlying mechanisms.
 
 
 
@@ -342,7 +352,7 @@ Now we come to the physiological side. So far, stable resting brain activities h
 	\caption{The top two images show how the force modulation task is performed, and the bottom image shows what a subject sees during the experiment (taken from \cite{subject2016}).}
 \end{figure}
 
-\paragraph{Data source} The EEG data was recorded by Professor Benjamin Godde and his research group for a motor learning study in older adults. 87 women participated in the study of which 55 were between the age of 67 and 83, and 32 were between the age of 19 and 29. The older participants were recruited using the contact information stored in a previous study at Jacobs University Bremen, and the younger participants were recruited using flyers and mailing lists. The subjects were asked to conduct a fine motor force modulation task, in which the subjects needed to apply some precise grip with dominant hand on a force transducer. The experiment setup is shown in the top two images of Figure 4. The performance of the force being applied can be seen on a monitor, on which both the target force and the actual force are shown to give feedbacks (Figure 4 bottom). The subjects needed to track the target force as close as he could. Irregular since wave pattern of eight waves were collected per trial, and eight trials made up a block. The target variable we have the pre-and-post training Root Mean Square Error (RMSE)  \nomenclature{\textbf{RMSE}}{Root Mean Square Error} from since wave two to wave seven.
+\paragraph{Data source} The EEG data was recorded by Professor Benjamin Godde and his research group for a motor learning study in older adults. 87 women participated in the study of which 55 were between the age of 67 and 83, and 32 were between the age of 19 and 29. The older participants were recruited using the contact information stored in a previous study at Jacobs University Bremen, and the younger participants were recruited using flyers and mailing lists. The subjects were asked to conduct a fine motor force modulation task, in which the subjects needed to apply some precise grip with dominant hand on a force transducer. The experiment setup is shown in the top two images of Figure 4. The performance of the force being applied can be seen on a monitor, on which both the target force and the actual force are shown to give feedbacks (Figure 4 bottom). The subjects needed to track the target force as close as he could. Irregular since wave patterns of eight waves were collected per trial, and eight trials made up a block. Then we compute pre-and-post training Root Mean Square Error (RMSE)  \nomenclature{\textbf{RMSE}}{Root Mean Square Error} from since wave two to wave seven.
 
 
 \begin{figure}[h]
@@ -351,15 +361,12 @@ Now we come to the physiological side. So far, stable resting brain activities h
 	\caption{A clip of raw data for 8 channels across five seconds}
 \end{figure}
 
-  The resting-state EEG was recorded with 32 channels at a sampling rate of 2048 Hz. In Figure 5, one can see a short clip of the EEG recording for eight channels. Clearly, most of the signals demonstrate some periodic behaviors and on the lower half of the plot, channels like O1, Oz and O2 have more fluctuations within this time frame.  The recording machinery is an active electrode system (ActiveTwo, BioSemi, Amsterdam, Netherlands) mounted in an elastic nylon cap \cite{jasper1958ten}. The eventual usable data contains 79 subjects' resting EEG recordings for 80 seconds. There are 30 young subjects and 49 old subjects. The total EEG data is about 1.5 GB. In addition, for each subject, we have a few meta variables, some of which are going to compose MLA later on:
+  The resting-state EEG was recorded with 32 channels at a sampling rate of 2048 Hz. In Figure 5, one can see a short clip of the EEG recording for eight channels. Clearly, most of the signals demonstrate some periodic behaviors and on the lower half of the plot, channels like O1, Oz and O2 have more fluctuations within this time frame.  The recording machinery is an active electrode system (ActiveTwo, BioSemi, Amsterdam, Netherlands) mounted in an elastic nylon cap \cite{jasper1958ten}. The eventual usable data contains 79 subjects' resting EEG recordings for 80 seconds. There are 30 young subjects and 49 old subjects. The total EEG data is about 1.5 GB. In addition, for each subject, we have a few meta variables:
 \begin{itemize}
-	\item Biological traits: age and gender
 	\item Age group: a binary class variable to denote if a participant belongs to the young or old group
-	\item Moca: an indicator value for the risk of dementia
-	\item $VO_2$ peak: peak oxygen consumption in a stationary bicycle task for fitness level measurement
-	 \item MVC: max voluntary contraction, the max force between the thumb and index finger for 5 seconds 
-	 \item PreRMSE and PostRMSE: the motor performance before and after the motor learning training
+	 \item PreRMSE and PostRMSE: the motor performance before and after the motor learning training.
 \end{itemize}
+PreRMSE and PostRMSE are going to make up a latent variable, MLA, as the output of the model.
 
 Since we are building a binary EEG classifier, the model construction pipeline is quite obvious. For this project, we follow the construction diagram in Figure 6. The whole experiment section mainly consists of three stages: preprocessing, model building and post-processing.
 

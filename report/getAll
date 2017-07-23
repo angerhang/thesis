@@ -1,0 +1,6 @@
+#!/bin/sh
+# get glossary
+pdflatex eeg_report.tex
+makeindex eeg_report.nlo -s nomencl.ist -o eeg_report.nls
+
+

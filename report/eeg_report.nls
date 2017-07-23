@@ -1,0 +1,38 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{\textbf{BCIs}}]\begingroup Brain-Computer Interfaces\nomeqref {0}
+		\nompageref{2}
+  \item [{\textbf{DL}}]\begingroup Deep Learning\nomeqref {0}
+		\nompageref{1}
+  \item [{\textbf{EEG}}]\begingroup Electroencephalogram\nomeqref {0}
+		\nompageref{2}
+  \item [{\textbf{ESNs}}]\begingroup Echo State Networks\nomeqref {0}
+		\nompageref{2}
+  \item [{\textbf{FNNs}}]\begingroup Feedforward Neural Networks\nomeqref {0}
+		\nompageref{1}
+  \item [{\textbf{LDA}}]\begingroup Linear Discriminant Analysis\nomeqref {7}
+		\nompageref{8}
+  \item [{\textbf{MARA}}]\begingroup Multiple Artifact Rejection Algorithm\nomeqref {7}
+		\nompageref{8}
+  \item [{\textbf{MLP}}]\begingroup  Multilayer Perceptron\nomeqref {7}
+		\nompageref{8}
+  \item [{\textbf{MLS}}]\begingroup  Motor Learning Skills\nomeqref {0}
+		\nompageref{2}
+  \item [{\textbf{ML}}]\begingroup Machine Learning\nomeqref {6}
+		\nompageref{6}
+  \item [{\textbf{OH}}]\begingroup Old High Performers\nomeqref {7}
+		\nompageref{16}
+  \item [{\textbf{OL}}]\begingroup Old Low Performers\nomeqref {7}
+		\nompageref{16}
+  \item [{\textbf{RMSE}}]\begingroup Root Mean Square Error\nomeqref {7}
+		\nompageref{10}
+  \item [{\textbf{RNNs}}]\begingroup Recurrent Neural Networks\nomeqref {0}
+		\nompageref{2}
+  \item [{\textbf{SVMs}}]\begingroup Support Vector Machines\nomeqref {0}
+		\nompageref{1}
+  \item [{\textbf{YH}}]\begingroup Young High Performers\nomeqref {7}
+		\nompageref{16}
+
+\end{thenomenclature}

@@ -90,11 +90,6 @@ Wolfgang Maass, Prashant Joshi, and Eduardo~D Sontag.
 \newblock Computational aspects of feedback in neural circuits.
 \newblock {\em PLoS Comput Biol}, 3(1):e165, 2007.
 
-\bibitem{jaeger2001short}
-Herbert Jaeger.
-\newblock {\em Short term memory in echo state networks}.
-\newblock GMD-Forschungszentrum Informationstechnik, 2001.
-
 \bibitem{schrauwen2007introduction}
 Benjamin Schrauwen, Jeroen Defour, David Verstraeten, and Jan Van~Campenhout.
 \newblock The introduction of time-scales in reservoir computing, applied to
