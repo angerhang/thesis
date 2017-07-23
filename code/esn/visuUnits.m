@@ -17,6 +17,7 @@ figure
 for i=1:20
     subplot(4, 5, i);
     plot(xs, x(unitIdx(i), initP:endP));
+    xlim([initP endP])
     str = sprintf('%d unit', i + unitIdx(i) - 1);
     title(str);
 end

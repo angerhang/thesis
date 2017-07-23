@@ -14,33 +14,35 @@ eeglab;
 cd ../esn
 
 %% model setup 
-alpha = 0.003;
+alpha = 0.1;
 %alpha = 0.00001; % leaky rate
 NC = 12; % number of input channels
-NX = 250; % number of internal units
+NX = 1500; % number of internal units
 LP = 2; % class number
-row = 1; % spetral radius
-in_scale = 0.2; % w_in will be sampled from [-in_scale, in_scale]
-bias_scale = 0.1; 
-startPoint = 550; % cut off point for internal unit responses 
+row = 0.1; % spetral radius
+in_scale = 1; % w_in will be sampled from [-in_scale, in_scale]
+bias_scale = 1; 
+startPoint = 700; % cut off point for internal unit responses 
 % reg = 2.2e-05; % regulization term
-reg = 2.2e-05; % regulization term
+reg = 0; % regulization term
 
-k = 5;
+k = 3;
 
 % model construction
-[u, y, intervals, true_labels, max_u, min_u] = loadData(3);
-
+[u, y, intervals, true_labels, max_u, min_u] = loadData(2);
+alphas = [0.1 0.25 0.4 0.55 0.70];
+rows = [0.1 0.25 0.4 0.55 0.70]; % spetral radius
+regs = [1e-06 5e-06 1e-05 5e-05 1e-04 5e-04 1e-03 5e-03 1e-02];
 %% training
 % simple custom inputs
 % [u, y] = simulate(100000);
-erros = zeros(15, 5);
+erros = zeros(9, 5);
 
 tic;
 count = 1;
-for i=1:15
+for i=1:9
+reg = regs(i);
 fprintf('%d iteration\n', count);
-[x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
 fprintf('Networks parameters: input channels: %d\n', NC);
 fprintf('Internal units size: %d Leaky rate %f\n', NX, alpha);
 fprintf('Spetrual radius  %f\n', row);
@@ -50,6 +52,7 @@ fprintf('Regulization term is: %f\n', reg);
 
 fprintf('Start cross-validation ...\n');
 % cross validation
+[x, w_in, w] = constructDR(NX, NC, row, in_scale, bias_scale);
 [~, ~, train_er, test_er] = cross_validate(u, y, x, w, w_in, alpha,... 
                 startPoint, intervals, reg, k, true_labels, LP);
             
@@ -59,13 +62,12 @@ erros(count, 3)= alpha;
 erros(count, 4)= row;
 erros(count, 5)= reg;
 count = count + 1;
-alpha = alpha + 0.002;
-
 end
 
 timeUsed = toc;
+xs = 1:9;
 
-plot(erros(:, 5), erros(:,1), 'b', erros(:, 5), erros(:, 2), 'g');
+plot(xs, erros(:,1), 'b', xs, erros(:, 2), 'g');
 save('reg.mat', 'erros');
 
 [M, w_out, x] = startTraining(u, y, x, w, w_in, alpha, ... 
@@ -85,15 +87,15 @@ fprintf('The trianing error is %d: %f percent\n', error, ...
     error/size(intervals, 1));
 
 % visu classification 
-initP = 1;
-endP = 2000;
+initP = train_ints(1,1);
+endP =  train_ints(2,2);
 
-visuClass(u, y, y_pre, initP, endP);
-unitS = 100;
+visuClass(train_u, train_y, y_pre, initP, endP);
+unitS = 30;
 visuUnits(M, initP, endP, unitS);
 
-small = 0.91:0.01:1;
-alphas = 0.0001:0.0001:0.001;
+small = 0.4:0.15:0.85;
+alphas = 0.1:0.15:0.55;
 ori = 0.00001;
 for i=1:10
     alphas(i) = ori;
@@ -102,7 +104,7 @@ end
 
 [X, Y] = meshgrid(small, alphas);
 subplot(2,1,2)       % add first plot in 2 x 2 grid
-Z = reshape(erros(:, 2), 10, 10); 
+Z = reshape(erros(:, 2), 4, 4); 
 surf(X, Y, Z);
 
 

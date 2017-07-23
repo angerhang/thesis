@@ -22,12 +22,6 @@ for i=1:size(names, 1)
     fprintf('%s preprocessing completed\n\n', names{i});
 end
 
-
-for i=72:size(names, 1)
-    preprocess(names{i});
-    fprintf('%s preprocessing completed\n\n', names{i});
-end
-
 % print out processing info
 timer = toc;
 fprintf('Processed %d files in total.\n', size(names, 1));

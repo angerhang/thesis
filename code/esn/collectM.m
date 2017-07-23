@@ -17,11 +17,13 @@ xs = zeros(size(x, 1) + size(U, 1) +1 , total_t - ...
     startPoint * size(intervals, 1)); 
 new_y = zeros(2, total_t - startPoint * size(intervals, 1));
 new_intervals = zeros(size(intervals));
+oldX = x;
 
 % loop for each data entry 
 for i=1:size(intervals, 1)
     current_c = 1;
     new_intervals(i, :) = [intervals(i, 1)-(i-1)*startPoint intervals(i, 2)-i*startPoint];
+    x = oldX;
     
     for t=intervals(i,1):intervals(i, 2)
         % update state

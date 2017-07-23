@@ -19,6 +19,7 @@ if size(u, 1) > 5
         for i=(j -1) * 6 + 1: j * 6
             subplot(6, 1, i - (j - 1) * 6);
             plot(xs, u(i, initP:endP));
+            xlim([initP endP]);
             str = sprintf('input dynamics %d', i);
             title(str);
         end
@@ -32,16 +33,23 @@ else
         title(str);
     end
 end
-
-% teacher and simulate teacher
+% teacher and simulate teacher 
+pointf = ones(1, size(xs, 2)) * 0.5;
 figure;
-subplot(2, 1, 1);
-plot(xs, y(1, initP:endP));
-title('teacher signal');
+plot(xs, y_pre(1, initP:endP), xs, y(1, initP:endP), ...
+    xs, y_pre(2, initP:endP),  xs, y(2, initP:endP), xs, pointf);
+legend({'simulated class 1','true class 1', 'simulated class 2','true class 2', 'constant'}, ...
+     'FontSize',13,'TextColor','black')
+xlabel('timestep');
+ylabel('signal magnitude');
 
-subplot(2, 1, 2);
-plot(xs, y_pre(2, initP:endP));
-title('simulated teacher signal');
+
+% subplot(2, 1, 2);
+% plot(xs, y_pre(1, initP:endP), xs, test_y(1, initP:endP), xs, y_pre(2, initP:endP), xs, test_y(2, initP:endP));
+% title('simulated teacher signal');
+% xlim([test_ints(6,1), test_ints(6,2)]);
+
+
 
 end
 

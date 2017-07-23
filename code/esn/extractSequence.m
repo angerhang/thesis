@@ -16,9 +16,9 @@ for i=1:size(intervals, 1)
     
      if i > 1
         newtrain_ints(i,:)= ...
-                    [newtrain_ints(i-1, 2)+1 newtrain_ints(i-1, 2) + step];
+                    [newtrain_ints(i-1, 2)+1 newtrain_ints(i-1, 2) + step+1];
     else 
-        newtrain_ints(1,:)=[1 step];
+        newtrain_ints(1,:)=[1 step+1];
     end
 end
 

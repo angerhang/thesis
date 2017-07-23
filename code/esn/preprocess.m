@@ -6,9 +6,8 @@ function preprocess(dataName)
 %      c. downsampling: 512Hz
 %      d. filtering: with bandpass 1-40Hz (notch to do)
 %      e. ICA to do
-dataPath = strcat('/Users/Hang/6thSemester/thesis/data/raw_eeg/', dataName);
+dataPath = strcat('/Users/Hang/thesis/data/raw_eeg/', dataName);
 
-[ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
 EEG = pop_biosig(dataPath);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'gui','off'); 
 EEG = eeg_checkset( EEG );
@@ -24,10 +23,16 @@ EEG = pop_resample( EEG, 256);
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 2,'gui','off'); 
 EEG = pop_eegfiltnew(EEG, 1,40,1690,0,[],1);
 
+EEG = pop_binica(EEG, 'extended',1,'interupt','on');
+processMARA ( ALLEEG,EEG,CURRENTSET )
+
+EEG = pop_subcomp( EEG, EEG.reject.gcompreject, 0);
+[ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 3,'gui','off'); 
+
 % saving procedure
 cd ../processed/
 to_save_name = strcat(dataName);
-[ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 3,'savenew', to_save_name ...
+[ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 4,'savenew', to_save_name ...
     ,'gui','off');
 cd ../raw_eeg/
 
