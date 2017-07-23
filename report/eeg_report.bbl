@@ -65,7 +65,7 @@ Mohammad~Ali Naderi and Homayoun Mahdavi-Nasab.
 \bibitem{petrosian2001recurrent}
 AA~Petrosian, DV~Prokhorov, W~Lajara-Nanson, and RB~Schiffer.
 \newblock Recurrent neural network-based approach for early recognition of
-  alzheimer's disease in eeg.
+  alzheimer's disease in {EEG}.
 \newblock {\em Clinical Neurophysiology}, 112(8):1378--1387, 2001.
 
 \bibitem{ubeyli2008multiclass}
@@ -189,7 +189,7 @@ Divya Balakrishnan and Sadasivan Puthusserypady.
   Annual Northeast}, pages 118--119. IEEE, 2005.
 
 \bibitem{millan2004noninvasive}
-Jd~R Millan, Frederic Renkens, Josep Mourino, and Wulfram Gerstner.
+J~del~R Mill{\'a}n, Frederic Renkens, Josep Mourino, and Wulfram Gerstner.
 \newblock Noninvasive brain-actuated control of a mobile robot by human {EEG}.
 \newblock {\em IEEE Transactions on Biomedical Engineering}, 51(6):1026--1033,
   2004.

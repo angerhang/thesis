@@ -6,7 +6,7 @@ Database file #1: eeg_report.bib
 Warning--can't use both volume and number fields in kohavi1995study
 You've used 44 entries,
             1791 wiz_defined-function locations,
-            712 strings with 12632 characters,
+            712 strings with 12641 characters,
 and the built_in function-call counts, 11861 in all, are:
 = -- 1105
 > -- 515
