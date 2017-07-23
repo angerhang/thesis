@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: eeg_report.aux
+The style file: unsrt.bst
+Database file #1: eeg_report.bib
+Warning--can't use both volume and number fields in kohavi1995study
+You've used 45 entries,
+            1791 wiz_defined-function locations,
+            715 strings with 12728 characters,
+and the built_in function-call counts, 12007 in all, are:
+= -- 1117
+> -- 519
+< -- 14
++ -- 192
+- -- 147
+* -- 831
+:= -- 1832
+add.period$ -- 146
+call.type$ -- 45
+change.case$ -- 41
+chr.to.int$ -- 0
+cite$ -- 46
+duplicate$ -- 539
+empty$ -- 1151
+format.name$ -- 147
+if$ -- 2724
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 46
+newline$ -- 228
+num.names$ -- 45
+pop$ -- 134
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 268
+stack$ -- 0
+substring$ -- 899
+swap$ -- 163
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 123
+width$ -- 47
+write$ -- 502
+(There was 1 warning)
