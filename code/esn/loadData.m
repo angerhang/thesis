@@ -9,11 +9,13 @@ function [u, y, intervals, true_labels, max_u, min_u] = loadData(option)
 
 %load('names.mat');  % load the mat for training set
 if option == 1
-    % oh vs yh: model b
+    % oh vs yh: model a
     load('names_labels.mat');
 elseif option == 2
+    % ol vs oh: model c
     load('seconddata.mat');
 else 
+    % ol vs yh: model b
     load('thirdGroup.mat');
 end
 

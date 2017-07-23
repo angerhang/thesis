@@ -15,7 +15,7 @@ total_t = size(U, 2);
 % internal unit responses 
 xs = zeros(size(x, 1) + size(U, 1) +1 , total_t - ...
     startPoint * size(intervals, 1)); 
-
+yt = zeros(size(y, 1), size(xs, 2));
 % loop for each data entry 
 for i=1:size(intervals, 1)
     current_c = 1;
@@ -32,17 +32,18 @@ for i=1:size(intervals, 1)
         % discard for the init phase for every sequence
         if current_c > startPoint
             xs(:, t - startPoint) = [1; u; x];
+            yt(:, t - startPoint) = y(:, t);
         end  
         
         current_c = current_c + 1;
     end
+    
 end
 
 % T = w_out * [1; u; xs];
 M = xs;
 
 xt = xs';
-yt = y(:, 1:(total_t - startPoint * size(intervals, 1)));
 % ridge regression
 w_out =  yt * xt * inv(xs * xt + reg * eye(size(x, 1) + size(U, 1) + 1));
 
