@@ -154,7 +154,7 @@ In this project, we successfully applied
 \section{Introduction}
 
 
-Given the long history of EEG studies, we have already decoded its relationships with a few brain processes like one's motor learning, motor imagery performance and even intelligence \cite{zhang2015efficient} \cite{ozdenizci2016resting}\cite{Doppelmayr2002289}.  Pursuing this line of inquiry this guided research plans to investigate if there exists a correlation between EEG signal and subjects' Motor Learning Skills (MLS), a latent variable that we will introduce more formally later.
+Given the long history of EEG studies, we have already decoded its relationships with a few brain processes like one's motor learning, motor imagery performance and even intelligence \cite{zhang2015efficient} \cite{ozdenizci2016resting}\cite{Doppelmayr2002289}.  Pursuing this line of inquiry, this project investigates if there exists a correlation between EEG signal and subjects' Motor Learning Skills (MLS), a latent variable that we will introduce more formally later.
 
 
 Echo State Networks (ESNs) \cite{jaeger2001echo} are the more engineering favored reservoir computing method that was
@@ -183,7 +183,7 @@ Because of ESNs' simplicity, we can focus more on the understanding of the nonli
 
 So far, there have been several successful applications of RNNs or ESNs on EEG data analysis. Epileptic seizures disorder is a popular application of such techniques. We can build a warning system for the patients to be informed about an upcoming episode using EEG classification. Furthermore, the doctors can use the EEG model for epileptic activities to evaluate the treatment effectiveness \cite{buteneers2008real} \cite{naderi2010analysis}.  RNNs have also been used to detect Alzheimer's disease early on and other neurological degeneration  \cite{petrosian2001recurrent}\cite{ubeyli2008multiclass}. 
 
-In this guided research, we have two objectives: one is of biological interest, finding out the association between resting state EEG and MLS,
+In this project, we have two objectives: one is of biological interest, finding out the association between resting state EEG and MLS,
 and the other is of engineering interest: investigating the limitations and effectiveness of ESNs on EEG like data.
 
 \section{Theoretical Frameworks}
@@ -199,7 +199,7 @@ $ \mathbf{y^{target}}(n) \in \mathbb{R}^{N_y} := (y^{target}_1(n), \dots, y^{tar
        \caption{A basic ESNs architecture taken from \cite{lukovsevivcius2012practical}.}
 \end{figure}
 
-As shown in Figure 1, the three different layers in the network have intermediate connections with each other, and sometimes they can even have feedback projections onto themselves. The black lines are the necessary connections, and the dotted ones are the optional connections. A typical minimal network graph will require three kinds of connections whose weights are expressed as: the input to the reservoir $\mathbf{W^{in}}$ , the internal connections among the units of the reservoir $\mathbf{W}$ and the reservoir to the output units $\mathbf{W^{out}}$. Optional input-to-output connections will increase the performance slightly at the cost of longer training time \cite{davidverstraeten2009}, and the optional output feedback loops to the internal units or to the output units themselves are used in signal simulation or to increase memory span\cite{maass2007computational}. In our experiment, since we do not need to simulate any time series, no back-projection is used.
+As shown in Figure 1, the three layers in the network have intermediate connections with each other, and sometimes they can even have feedback projections onto themselves. The black lines are the necessary connections, and the dotted ones are the optional connections. A typical minimal network graph will require three kinds of connections whose weights are expressed as: the input to the reservoir $\mathbf{W^{in}}$ , the internal connections among the units of the reservoir $\mathbf{W}$ and the reservoir to the output units $\mathbf{W^{out}}$. Optional input-to-output connections will increase the performance slightly at the cost of longer training time \cite{davidverstraeten2009}, and the optional output feedback loops to the internal units or to the output units themselves are used in signal simulation or to increase memory span\cite{maass2007computational}. In our experiment, since we do not need to simulate any time series, no back-projection is used.
 
 \paragraph{Propagation steps} At each time step, the internal units are updated using leaky-integrated equations:
 \begin{align}
@@ -361,7 +361,7 @@ Now we come to the physiological side. So far, stable resting brain activities h
 	\caption{A clip of raw data for 8 channels across five seconds}
 \end{figure}
 
-  The resting-state EEG was recorded with 32 channels at a sampling rate of 2048 Hz. In Figure 5, one can see a short clip of the EEG recording for eight channels. Clearly, most of the signals demonstrate some periodic behaviors and on the lower half of the plot, channels like O1, Oz and O2 have more fluctuations within this time frame.  The recording machinery is an active electrode system (ActiveTwo, BioSemi, Amsterdam, Netherlands) mounted in an elastic nylon cap \cite{jasper1958ten}. The eventual usable data contains 79 subjects' resting EEG recordings for 80 seconds. There are 30 young subjects and 49 old subjects. The total EEG data is about 1.5 GB. In addition, for each subject, we have a few meta variables:
+  The resting-state EEG was recorded with 32 channels at a sampling rate of 2048 Hz. In Figure 5, one can see a short clip of the EEG recording for eight channels. Clearly, most of the signals demonstrate some periodic behaviors and on the lower half of the plot, channels like O1, Oz and O2 have more fluctuations within this time frame.  The recording machinery is an active electrode system (ActiveTwo, BioSemi, Amsterdam, Netherlands) mounted in an elastic nylon cap \cite{jasper1958ten}. The eventual usable data contains 77 subjects' resting EEG recordings for 80 seconds. There are 30 young subjects and 49 old subjects. The total EEG data is about 1.5 GB. In addition, for each subject, we have a few meta variables:
 \begin{itemize}
 	\item Age group: a binary class variable to denote if a participant belongs to the young or old group
 	 \item PreRMSE and PostRMSE: the motor performance before and after the motor learning training.
@@ -376,7 +376,7 @@ Since we are building a binary EEG classifier, the model construction pipeline i
 	\caption{Data processing pipeline}
 \end{figure}
 
-	\paragraph{Preprocessing} As we already discussed in section 2, two of the main problems that an EEG classifier faces are the curse of dimensionality and low data-noise ratio. Therefore, cleaning and compression stages are necessary. For cleaning, we use a bandpass filter 0.5 - 79 Hz, then we apply ICA, in preparation for artifacts removal.\footnote{We run the runica version ICA in EEGLAB.}. After obtaining the independent components, we remove all the components that are marked as artifacts by MARA. Let us look at one example of MARA operates when being applied. 
+	\paragraph{Preprocessing} As we already discussed in section 2, two of the main problems that an EEG classifier faces are the curse of dimensionality and low data-noise ratio. Therefore, cleaning and compression stages are necessary. For cleaning, we use a bandpass filter 1-40 Hz, then we apply ICA, in preparation for artifacts removal.\footnote{We run the runica version ICA in EEGLAB.}. After obtaining the independent components, we remove all the components that are marked as artifacts by MARA. Let us look at one example of MARA operates when being applied. 
 
 	\begin{figure}[!h]
 	\begin{center}
@@ -563,14 +563,14 @@ Previously ESNs have been shown to be useful for epileptic seizure detection. Th
 
 Furthermore, this guided research is also an attempt for correlation analysis in the realm of end-to-end ML techniques. ML techniques are powerful, and they will become even more so, if we understand what is going on behind the scene, in addition to merely focusing on the model performance without much understanding. 
 
-Possible future works include constructing the gradient target value for MLS instead of using binary classification to have more conclusive results. Also importantly, one can apply the notch filter and proper normalization scheme to see how much more accurate the classifiers can get. This extension should in theory help to develop a working classifier between OL and OH, since we already have an indirect routine to differentiate these two groups as shown in Listing 1. 
+Possible future works include constructing the gradient target value for MLS instead of using binary classification to have more conclusive results. Also importantly, one can apply the notch filter and proper normalization scheme to see how much more accurate the classifiers can get. This extension should in theory help to develop a working classifier between OL and OH, since we already have an indirect routine to differentiate these two groups as shown in Listing 1. Eventually a good three-class classifier between OL, OH, and YH should also be possible.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{img/futureVisu.png}
 	\caption{A mini example for classified input signals in model b. Red means class 1 and blue means class 2.  }
 \end{figure}
-One could also further develop general statistical frameworks of how to construct different classifiers and by analyzing their decision boundaries for hypothesis testing and explore their mathematical nature. Perhaps something more feasible that can be done is to develop ML-assisted techniques for scientific discovery. We have shown that there are differences among OH, OL, and YH, but the exact difference is unknown. One nice thing about ESNs is that we can visualize and internal dynamics a lot easier than ML methods which often have parameters of on the order of millions. We can visualize input channels, reservoir dynamics with the help of decision vector as shown in Figure 17. The colors are given based on the outputs of the network, then the human experts can directly observe what kind of activities that the networks consider as class one or class two to help with their investigation. We will probably obtain more insights by averaging the EEG data, to find out the most common pattern being classified to a particular class, if we are determined to find out the analytical explanations. In this ML-assisted fashion, the myths of black-box modeling should start to unfold.
+One could also further develop general statistical frameworks of how to construct different classifiers and by analyzing their decision boundaries for hypothesis testing and explore their mathematical nature. Perhaps something more feasible that can be done is to develop ML-assisted techniques for scientific discovery. By occlusion of EEG features and comparison of the model performance, we can figure out what is more influential to the target variable. In addition, we have shown that there are differences among OH, OL, and YH, but the exact difference is unknown. One nice thing about ESNs is that we can visualize and internal dynamics a lot more easily than ML methods which often have parameters in the order of millions. We can visualize input channels, reservoir dynamics with the help of decision vector as shown in Figure 17. The colors are given based on the outputs of the network, then the human experts can directly observe what kind of activities that the networks consider as class one or class two to help with their investigation. We will probably obtain more insights by averaging the EEG data, to find out the most common pattern being classified to a particular class, if we are determined to find out the analytical explanations. In this ML-assisted fashion, the myths of black-box modeling should start to unfold.
 
 
 
