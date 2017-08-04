@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.2}Resting State Electroencephalogram (EEG)}{5}{subsection.2.2}
 \contentsline {paragraph}{Properties of EEG features for analytics}{6}{section*.8}
 \contentsline {paragraph}{Preprocessing}{6}{section*.9}
-\contentsline {paragraph}{Artifacts}{7}{section*.10}
+\contentsline {paragraph}{Artifacts}{8}{section*.10}
 \contentsline {paragraph}{Classification overview}{8}{section*.11}
 \contentsline {section}{\numberline {3}Motivation}{9}{section.3}
 \contentsline {section}{\numberline {4}Experiments}{10}{section.4}

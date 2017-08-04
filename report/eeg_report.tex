@@ -66,7 +66,7 @@
 \vspace{6.5cm}
 
 % Author
-{\noindent \large \textsf{Hang Yuan, Claudia Voelcker-Rehage, Lena H\"ubner, Benjamin Godde }} \\
+{\noindent \large \textsf{Hang Yuan, Claudia Voelcker-Rehage, Lena H\"ubner, Ben Godde }} \\
 \\
 
 % Title
@@ -74,11 +74,11 @@
 \vfill
 
 % Report number
-{\noindent \LARGE \textsf{Technical Report No. 36}} \\
+{\noindent \LARGE \textsf{Technical Report No. 37}} \\
 % Month and year (e.g. May 2007)
 {\noindent \textsf{August 2017}} \\
 {\hspace*{-3.17cm} \rule[3mm]{\textwidth}{0.75pt}} \\
-{\LARGE \textsf{School of Engineering and Science}} \\
+{\Large \textsf{Dept. of Computer Science and Electrical Engineering}} \\
 % ----------------------------------------------------
 
 
@@ -95,7 +95,7 @@
 \vspace{1cm}
 
 \noindent
-{\bf Hang Yuan, Claudia Voelcker-Rehage, Lena Hübner, Benjamin Godde  }\\
+{\bf Hang Yuan, Claudia Voelcker-Rehage, Lena Hübner, Ben Godde  }\\
 \\
 {\it 
 School of Engineering and Science\\
@@ -287,7 +287,7 @@ These are paramount factors to consider when one analyzes EEG signals.
 	\end{figure}
 
 	\item Noise and signal: EEG signals are noisy, and the noises are often hard to discriminate. One will have to find the fine line between removing too much useful information and having noisy data depending on the given task. Figure 3 is a good demonstration of the signal and noise relationship.
-	\item Non-stationarity: EEG signals from the same subject can change as gel on the recording electrodes dry up, the subject has a different mental state or even the dislocation of the electrodes in a different trials/sessions.
+	\item Non-stationarity: EEG signals from the same subject can change as gel on the recording electrodes dry up, the subject has a different mental state or even the electrodes move around on the scalp. Nevertheless, in this study the effect of non-stationarity should be minimal because we only have the recording for a short time. The EEG features' distribution should remain relatively stable during such a period.
 	\item Small training sets: Due to the costs of collecting data from subjects, the training sets are oftentimes 
 	smaller than ideal.
 \end{itemize}
@@ -331,7 +331,6 @@ The main objective of this guided research lies in two folds, one is engineering
 
 So far the applications of ESNs being used as an EEG classifier are not extensive, although there have been a few in the past years on sequence learning tasks, classifications of real time moving objects \cite{mitul2013classification} and time series classification for the prediction of dialysis \cite{ongenae2013time}. On this note, we wish to summarize the proposed questions from the engineering perspective:
 \begin{itemize}
-	\item How tolerant ESNs are when dealing with noisy and non-stationary data like EEG, and when it is good enough to stop cleaning without compromising  useful information.  
 	\item How ESNs can best handle time-variant features, more specifically how they deal with the drifting of amplitudes which can be slow and fast at different times?
 	\item What kinds of tuning need to be done in order to avoid this situation, as training a classifier for EEG using neural networks is prone to over-fitting?
 	\item Is it possible to adapt the reservoir distribution somehow such that the model is better suited for EEG classification?
@@ -431,8 +430,8 @@ Since we are building a binary EEG classifier, the model construction pipeline i
 			\hline
 			Group name & Subject count  \\ [0.5ex] 
 			\hline\hline
-			Young High (YH)  & 28 \\ 
-			Old Low (OL) & 23  \\
+			Young High (YH)  & 29 \\ 
+			Old Low (OL) & 24  \\
 			Old High (OH) & 24  \\ [0.5ex] 
 			\hline
 		\end{tabular}
